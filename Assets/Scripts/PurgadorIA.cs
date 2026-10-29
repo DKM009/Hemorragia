@@ -17,7 +17,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class PurgadorIA : MonoBehaviour
 {
-    public enum Estado { Patrullar, Rastrear, Perseguir, Escondido }
+    public enum Estado { Patrullar, Rastrear, Perseguir, Escondido, Investigando }
 
     // ── Movimiento ───────────────────────────────────────────────────────────
     [Header("Movimiento")]
@@ -75,6 +75,11 @@ public class PurgadorIA : MonoBehaviour
     float   tContacto;
     float   tSinRastro;
 
+    // Investigar un sonido (lata) y recordar donde vio al jugador por ultima vez
+    Vector2 destinoInvestigar;
+    float   tInvestigar;
+    Vector2 ultimaPosVista;
+
     // Ultimo charco al que se dirige
     Vector2 charcoObjetivo;
     bool    tieneCharcoObjetivo;
@@ -116,6 +121,30 @@ public class PurgadorIA : MonoBehaviour
         ActualizarMovimiento();
     }
 
+    // ── API publica ──────────────────────────────────────────────────────────
+
+    /// <summary>Hace que el Purgador vaya a investigar un punto (lata, ruido).</summary>
+    public void Investigar(Vector2 punto, float segundos)
+    {
+        if (EstadoActual == Estado.Perseguir) return; // ya tiene al jugador a la vista
+        destinoInvestigar = punto;
+        tInvestigar       = segundos;
+    }
+
+    /// <summary>Vuelve al estado inicial (tras morir el jugador).</summary>
+    public void Reiniciar()
+    {
+        EstadoActual        = Estado.Patrullar;
+        tInvestigar         = 0f;
+        tSinRastro          = 0f;
+        tContacto           = 0f;
+        tieneCharcoObjetivo = false;
+        indicePatrulla      = 0;
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+        if (puntosPatrulla != null && puntosPatrulla.Length > 0 && puntosPatrulla[0] != null)
+            destinoActual = puntosPatrulla[0].position;
+    }
+
     // ── Deteccion ─────────────────────────────────────────────────────────────
     void ActualizarDeteccion()
     {
@@ -127,13 +156,22 @@ public class PurgadorIA : MonoBehaviour
         {
             if (EstadoActual != Estado.Perseguir)
                 Alertar(sonidoDeteccion);
-            EstadoActual = Estado.Perseguir;
-            tSinRastro   = 0f;
+            EstadoActual   = Estado.Perseguir;
+            tSinRastro     = 0f;
+            tInvestigar    = 0f;
+            ultimaPosVista = jugador.position;
             return;
         }
 
-        // Buscar charcos de sangre del jugador
-        if (EstadoActual != Estado.Perseguir && sistemaSangre != null)
+        // Un sonido (lata) tiene prioridad sobre el rastro de sangre
+        if (tInvestigar > 0f && EstadoActual != Estado.Perseguir)
+        {
+            EstadoActual = Estado.Investigando;
+            return;
+        }
+
+        // Buscar charcos de sangre del jugador (si esta escondido no huele nada)
+        if (EstadoActual != Estado.Perseguir && sistemaSangre != null && !Escondite.JugadorOculto)
         {
             var rastro = sistemaSangre.ObtenerRastro();
             foreach (var charco in rastro)
@@ -171,6 +209,7 @@ public class PurgadorIA : MonoBehaviour
     bool TieneVision()
     {
         if (jugador == null) return false;
+        if (Escondite.JugadorOculto) return false; // escondido: no lo ve
         float dist = Vector2.Distance(transform.position, jugador.position);
         if (dist > radioVision) return false;
 
@@ -180,8 +219,19 @@ public class PurgadorIA : MonoBehaviour
         if (angulo > anguloVision * 0.5f) return false;
 
         // Raycast para ver si hay pared entre el purgador y el jugador
-        var hit = Physics2D.Raycast(transform.position, dir, dist, capaObstaculos);
-        return hit.collider == null;
+        // Se ignoran triggers, el propio Purgador, otros Purgadores y al jugador.
+        // Si capaObstaculos esta vacia se usan todas las capas.
+        foreach (var h in Physics2D.RaycastAll(transform.position, dir, dist))
+        {
+            if (h.collider == null || h.collider.isTrigger) continue;
+            if (h.collider.transform.IsChildOf(transform)) continue;
+            if (h.collider.CompareTag("Player")) continue;
+            if (h.collider.GetComponentInParent<PurgadorIA>() != null) continue;
+            if (capaObstaculos.value != 0 &&
+                ((1 << h.collider.gameObject.layer) & capaObstaculos.value) == 0) continue;
+            return false; // hay una pared en medio
+        }
+        return true;
     }
 
     // ── Estado / Movimiento ───────────────────────────────────────────────────
@@ -200,7 +250,12 @@ public class PurgadorIA : MonoBehaviour
                 break;
             case Estado.Perseguir:
                 if (jugador != null)
-                    destinoActual = jugador.position;
+                    destinoActual = Escondite.JugadorOculto ? ultimaPosVista : (Vector2)jugador.position;
+                break;
+            case Estado.Investigando:
+                destinoActual = destinoInvestigar;
+                tInvestigar  -= Time.deltaTime;
+                if (tInvestigar <= 0f) EstadoActual = Estado.Patrullar;
                 break;
         }
     }
@@ -232,6 +287,7 @@ public class PurgadorIA : MonoBehaviour
         float velocidad = EstadoActual switch
         {
             Estado.Rastrear    => velocidadRastreo,
+            Estado.Investigando => velocidadRastreo,
             Estado.Perseguir   => velocidadPersecucion,
             _                  => velocidadPatrulla
         };
@@ -253,6 +309,7 @@ public class PurgadorIA : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         if (!col.collider.CompareTag("Player")) return;
+        if (Escondite.JugadorOculto) return; // escondido: no lo encuentra
         if (tContacto > 0f) return;
 
         tContacto = cooldownContacto;

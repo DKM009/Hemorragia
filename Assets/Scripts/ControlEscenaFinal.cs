@@ -34,6 +34,26 @@ public class ControlEscenaFinal : MonoBehaviour
         if (textoCreditos != null) { textoCreditos.color = new Color(textoCreditos.color.r, textoCreditos.color.g, textoCreditos.color.b, 0f); }
         if (botonMenu     != null)   botonMenu.gameObject.SetActive(false);
 
+        // El boton creado por el editor no guarda su accion: se conecta aqui
+        if (botonMenu != null)
+        {
+            botonMenu.onClick.RemoveListener(IrAlMenu);
+            botonMenu.onClick.AddListener(IrAlMenu);
+        }
+
+        // Asegurar que los clics funcionan (EventSystem con el modulo correcto)
+        UIFab.AsegurarEventSystem();
+#if ENABLE_INPUT_SYSTEM
+        var es = FindFirstObjectByType<UnityEngine.EventSystems.EventSystem>();
+        if (es != null)
+        {
+            var viejo = es.GetComponent<UnityEngine.EventSystems.StandaloneInputModule>();
+            if (viejo != null) Destroy(viejo);
+            if (es.GetComponent<UnityEngine.InputSystem.UI.InputSystemUIInputModule>() == null)
+                es.gameObject.AddComponent<UnityEngine.InputSystem.UI.InputSystemUIInputModule>();
+        }
+#endif
+
         StartCoroutine(SecuenciaFinal());
     }
 

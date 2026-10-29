@@ -115,6 +115,12 @@ public class GestorJuego : MonoBehaviour
 
         if (mov != null) mov.enabled = true;
 
+        // Enemigos de vuelta a su sitio
+        var nivel1 = FindFirstObjectByType<GestorNivel1>();
+        if (nivel1 != null) nivel1.ReiniciarTrasMuerte();
+        var nivel2 = FindFirstObjectByType<GestorNivel2>();
+        if (nivel2 != null) nivel2.ReiniciarTrasMuerte();
+
         EstaEnGameOver = false;
 
         yield return StartCoroutine(FadeNegro(apagar: false));

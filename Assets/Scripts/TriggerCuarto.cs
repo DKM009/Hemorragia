@@ -87,6 +87,12 @@ public class TriggerCuarto : MonoBehaviour
         }
     }
 
+    /// <summary>Permite que el trigger vuelva a dispararse (tras morir el jugador).</summary>
+    public void Reiniciar()
+    {
+        disparado = false;
+    }
+
     void OnDrawGizmos()
     {
         Gizmos.color = tipo switch

@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel4.unity
     guid: ea1887caa83c7b343933f31f1a22a288
+  - enabled: 1
+    path: Assets/Scenes/EscenaFinal.unity
+    guid: 31cc3fb71b1a4fd4eaf9f064ba4271be
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

@@ -43,9 +43,19 @@ public class CambiarNivel : MonoBehaviour
         int siguiente = actual + 1;
 
         if (siguiente >= SceneManager.sceneCountInBuildSettings)
-            return escenaFinal;
+            return EscenaFinalONenu();
 
-        return SceneManager.GetSceneByBuildIndex(siguiente).name;
+        // GetSceneByBuildIndex().name devuelve vacio si la escena no esta cargada;
+        // se saca el nombre de la ruta de la escena en Build Settings.
+        string ruta   = SceneUtility.GetScenePathByBuildIndex(siguiente);
+        string nombre = System.IO.Path.GetFileNameWithoutExtension(ruta);
+        return string.IsNullOrEmpty(nombre) ? EscenaFinalONenu() : nombre;
+    }
+
+    // Si EscenaFinal no esta en Build Settings, vuelve al menu en vez de fallar.
+    string EscenaFinalONenu()
+    {
+        return Application.CanStreamedLevelBeLoaded(escenaFinal) ? escenaFinal : "MenuPrincipal";
     }
 
     void OnDrawGizmos()

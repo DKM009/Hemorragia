@@ -44,6 +44,8 @@ public class GestorNivel1 : MonoBehaviour
     public PurgadorIA[] purgadoresEmboscada;
     [Tooltip("La Fosa irrumpe al llegar al trigger de climax del Cuarto 4.")]
     public LaFosaIA     laFosa;
+    [Tooltip("Pared que La Fosa rompe al irrumpir en el Cuarto 4.")]
+    public GameObject   barreraFosa;
 
     // ── Estado ────────────────────────────────────────────────────────────────
     [Header("Estado")]
@@ -51,6 +53,9 @@ public class GestorNivel1 : MonoBehaviour
 
     CamaraSeguimiento camara;
     bool climaxActivado;
+
+    // Posiciones iniciales de los enemigos, para reiniciarlos al morir el jugador
+    readonly List<KeyValuePair<Transform, Vector3>> posIniciales = new List<KeyValuePair<Transform, Vector3>>();
 
     // ─────────────────────────────────────────────────────────────────────────
 
@@ -63,6 +68,12 @@ public class GestorNivel1 : MonoBehaviour
 
     void Start()
     {
+        // Recordar donde empieza cada enemigo
+        RegistrarPosicion(purgadoresBodega);
+        RegistrarPosicion(purgadoresEmboscada);
+        if (laFosa != null)
+            posIniciales.Add(new KeyValuePair<Transform, Vector3>(laFosa.transform, laFosa.transform.position));
+
         // Guardar checkpoint inicial
         if (GestorJuego.Instancia != null && spawn1 != null)
             GestorJuego.Instancia.GuardarCheckpoint(spawn1.position);
@@ -98,6 +109,9 @@ public class GestorNivel1 : MonoBehaviour
 
         ActivarCuarto(indice);
         cuartoActual = indice;
+
+        // La Bodega (cuarto 3) tiene a los Purgadores patrullando desde que entras
+        if (indice == 2) ActivarEmboscadaBodega();
 
         // Guardar checkpoint al llegar a un nuevo cuarto
         if (GestorJuego.Instancia != null && spawn != null)
@@ -146,11 +160,64 @@ public class GestorNivel1 : MonoBehaviour
 
         ActivarEnemigos(purgadoresEmboscada);
 
+        // La Fosa rompe la pared y empieza a perseguir
+        if (barreraFosa != null) barreraFosa.SetActive(false);
+
         if (laFosa != null)
         {
             laFosa.gameObject.SetActive(true);
+            laFosa.Despertar();
             Debug.Log("[GestorNivel1] CLIMAX: La Fosa ha irrumpido.");
         }
+
+        UIMensaje.Mostrar("LA FOSA!  Corre hacia la salida o escondete y no hagas ruido.", 5f);
+    }
+
+    // ── Reinicio tras morir ───────────────────────────────────────────────────
+
+    /// <summary>
+    /// Lo llama GestorJuego al reaparecer el jugador: enemigos a su sitio,
+    /// y si morias en el Cuarto 4 el climax se vuelve a armar.
+    /// </summary>
+    public void ReiniciarTrasMuerte()
+    {
+        foreach (var par in posIniciales)
+        {
+            if (par.Key == null) continue;
+            par.Key.position = par.Value;
+            var rb = par.Key.GetComponent<Rigidbody2D>();
+            if (rb != null) rb.linearVelocity = Vector2.zero;
+        }
+
+        ReiniciarLista(purgadoresBodega);
+        ReiniciarLista(purgadoresEmboscada);
+        if (laFosa != null) laFosa.Reiniciar();
+
+        if (cuartoActual == 3)
+        {
+            climaxActivado = false;
+            DesactivarEnemigos(purgadoresEmboscada);
+            if (laFosa != null) laFosa.gameObject.SetActive(false);
+            if (barreraFosa != null) barreraFosa.SetActive(true);
+        }
+
+        foreach (var tc in FindObjectsByType<TriggerCuarto>(FindObjectsSortMode.None))
+            tc.Reiniciar();
+    }
+
+    void RegistrarPosicion(PurgadorIA[] lista)
+    {
+        if (lista == null) return;
+        foreach (var e in lista)
+            if (e != null)
+                posIniciales.Add(new KeyValuePair<Transform, Vector3>(e.transform, e.transform.position));
+    }
+
+    void ReiniciarLista(PurgadorIA[] lista)
+    {
+        if (lista == null) return;
+        foreach (var e in lista)
+            if (e != null) e.Reiniciar();
     }
 
     // ── Utilidades ────────────────────────────────────────────────────────────

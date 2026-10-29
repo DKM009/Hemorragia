@@ -13,6 +13,12 @@ using UnityEngine;
 /// </summary>
 public class Escondite : MonoBehaviour
 {
+    /// <summary>True mientras el jugador esta escondido. Los Purgadores lo consultan.</summary>
+    public static bool JugadorOculto { get; private set; }
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    static void ReiniciarEstatico() { JugadorOculto = false; }
+
     [Header("Visual")]
     [Tooltip("Alpha del jugador cuando esta escondido (0 = invisible).")]
     [Range(0f, 1f)] public float alphaEscondido = 0.25f;
@@ -29,13 +35,15 @@ public class Escondite : MonoBehaviour
 
     void Start()
     {
-        laFosa = FindFirstObjectByType<LaFosaIA>();
+        laFosa = FindFirstObjectByType<LaFosaIA>(FindObjectsInactive.Include);
         if (indicadorUI != null) indicadorUI.SetActive(false);
     }
 
     void Update()
     {
         if (!jugadorDentro) return;
+
+        UIMensaje.Pista(jugadorEscondido ? "[E] Salir del escondite" : "[E] Esconderse");
 
         if (PulsarInteraccion())
         {
@@ -57,6 +65,7 @@ public class Escondite : MonoBehaviour
     void Esconder()
     {
         jugadorEscondido = true;
+        JugadorOculto    = true;
         laFosa?.JugadorSeEscondio();
         if (indicadorUI != null) indicadorUI.SetActive(false);
     }
@@ -64,6 +73,7 @@ public class Escondite : MonoBehaviour
     void Salir()
     {
         jugadorEscondido = false;
+        JugadorOculto    = false;
         laFosa?.JugadorSalioEscondite();
         if (indicadorUI != null) indicadorUI.SetActive(true);
     }
@@ -81,6 +91,7 @@ public class Escondite : MonoBehaviour
         if (!otro.CompareTag("Player")) return;
         jugadorDentro    = false;
         jugadorEscondido = false;
+        JugadorOculto    = false;
         laFosa?.JugadorSalioEscondite();
         if (indicadorUI != null) indicadorUI.SetActive(false);
         // Restaurar alpha
@@ -88,6 +99,11 @@ public class Escondite : MonoBehaviour
         {
             Color c = spriteJugador.color; c.a = 1f; spriteJugador.color = c;
         }
+    }
+
+    void OnDisable()
+    {
+        if (jugadorEscondido) JugadorOculto = false;
     }
 
     bool PulsarInteraccion()

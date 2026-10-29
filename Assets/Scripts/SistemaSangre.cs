@@ -61,6 +61,7 @@ public class SistemaSangre : MonoBehaviour
     // ── Estado interno ───────────────────────────────────────────────────────
     MovimientoJugador movimiento;
     List<Vector2>     rastroCharcos = new List<Vector2>();
+    List<float>       tiemposCharcos = new List<float>();
     Vector2           ultimaPos;
     float             distAcumulada;
     float             tActivacionCauterizacion;
@@ -69,6 +70,7 @@ public class SistemaSangre : MonoBehaviour
 
     // ── Luz de cauterizacion ─────────────────────────────────────────────────
     Light2D luzCauterizacion;
+    bool _reiniciando;
 
     // ─────────────────────────────────────────────────────────────────────────
 
@@ -101,6 +103,7 @@ public class SistemaSangre : MonoBehaviour
     {
         ActualizarSangrado();
         ActualizarCauterizacion();
+        PurgarRastroViejo();
         ActualizarRastro();
         ActualizarEstado();
         ActualizarCamara();
@@ -149,8 +152,6 @@ public class SistemaSangre : MonoBehaviour
     // ── Rastro de charcos ────────────────────────────────────────────────────
     void ActualizarRastro()
     {
-        if (prefabCharco == null) return;
-
         Vector2 pos = transform.position;
         distAcumulada += Vector2.Distance(pos, ultimaPos);
         ultimaPos = pos;
@@ -169,22 +170,55 @@ public class SistemaSangre : MonoBehaviour
 
     void DejarCharco(Vector2 pos)
     {
-        if (prefabCharco == null) return;
-
-        var charco = Instantiate(prefabCharco, pos + Vector2.down * 0.5f, Quaternion.identity);
-
-        // Escala el charco segun cuanta sangre falta
+        GameObject charco;
         float tamano = Mathf.Lerp(0.2f, 0.8f, 1f - PctSangre);
-        charco.transform.localScale = Vector3.one * tamano;
 
-        // Registrar posicion para los Purgadores
+        if (prefabCharco != null)
+        {
+            charco = Instantiate(prefabCharco, pos + Vector2.down * 0.5f, Quaternion.identity);
+            charco.transform.localScale = Vector3.one * tamano;
+        }
+        else
+        {
+            // Sin prefab asignado: se genera una mancha oscura plana sobre el suelo
+            charco = new GameObject("Charco");
+            float y = pos.y - 0.3f;
+            foreach (var h in Physics2D.RaycastAll(pos, Vector2.down, 3f))
+            {
+                if (h.collider == null || h.collider.isTrigger) continue;
+                if (h.collider.transform.IsChildOf(transform)) continue;
+                y = h.point.y + 0.03f;
+                break;
+            }
+            charco.transform.position   = new Vector3(pos.x, y, 0f);
+            charco.transform.localScale = new Vector3(tamano * 1.6f, 0.12f, 1f);
+            var sr = charco.AddComponent<SpriteRenderer>();
+            sr.sprite       = JugadorRef.SpriteBlanco();
+            sr.color        = new Color(0.45f, 0.02f, 0.03f, 0.9f);
+            sr.sortingOrder = 2;
+        }
+
+        // Registrar posicion para los Purgadores (max 30 charcos)
         rastroCharcos.Add(pos);
+        tiemposCharcos.Add(Time.time);
+        if (rastroCharcos.Count > 30)
+        {
+            rastroCharcos.RemoveAt(0);
+            tiemposCharcos.RemoveAt(0);
+        }
 
-        // Limpiar rastro viejo (max 30 charcos en lista)
-        if (rastroCharcos.Count > 30) rastroCharcos.RemoveAt(0);
-
-        // Auto-destruir el charco visual despues de 60 s
+        // El charco visual desaparece a los 60 s (y su rastro tambien, ver PurgarRastroViejo)
         Destroy(charco, 60f);
+    }
+
+    /// <summary>Quita del rastro los charcos que ya desaparecieron.</summary>
+    void PurgarRastroViejo()
+    {
+        while (tiemposCharcos.Count > 0 && Time.time - tiemposCharcos[0] > 60f)
+        {
+            tiemposCharcos.RemoveAt(0);
+            rastroCharcos.RemoveAt(0);
+        }
     }
 
     // ── Estado ───────────────────────────────────────────────────────────────
@@ -254,8 +288,14 @@ public class SistemaSangre : MonoBehaviour
         Debug.Log("[SistemaSangre] Jeremy se desangro. Game Over.");
         if (GestorJuego.Instancia != null)
             GestorJuego.Instancia.GameOver();
-        else
-            Debug.LogWarning("[SistemaSangre] GestorJuego no encontrado. Reiniciando escena de emergencia.");
+        else if (!_reiniciando)
+        {
+            // Sin GestorJuego: reinicia la escena actual para no quedar atorado
+            _reiniciando = true;
+            Debug.LogWarning("[SistemaSangre] GestorJuego no encontrado. Reiniciando escena.");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(
+                UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        }
     }
 
     // ── API publica ──────────────────────────────────────────────────────────
@@ -269,10 +309,17 @@ public class SistemaSangre : MonoBehaviour
         sangre = Mathf.Max(0f, sangre - cantidad);
     }
 
+    /// <summary>Recupera sangre (vendas).</summary>
+    public void Curar(float cantidad)
+    {
+        sangre = Mathf.Min(sangreMaxima, sangre + cantidad);
+    }
+
     /// <summary>Resetea la sangre al maximo (uso en checkpoints / depuracion).</summary>
     public void ResetearSangre()
     {
         sangre = sangreMaxima;
         rastroCharcos.Clear();
+        tiemposCharcos.Clear();
     }
 }

@@ -91,6 +91,30 @@ public class LaFosaIA : MonoBehaviour
         camara = Camera.main?.GetComponent<CamaraSeguimiento>();
     }
 
+    void OnEnable()
+    {
+        // La Fosa nace desactivada: se registra en el gestor de ruido al activarse
+        if (GestorRuido.Instancia != null) GestorRuido.Instancia.Registrar(this);
+    }
+
+    /// <summary>La Fosa irrumpe: empieza a perseguir de inmediato (climax).</summary>
+    public void Despertar()
+    {
+        Ruido = Mathf.Max(Ruido, umbralActivacion + 10f);
+        CambiarEstado(Estado.Persiguiendo);
+    }
+
+    /// <summary>Vuelve a dormir (tras morir el jugador).</summary>
+    public void Reiniciar()
+    {
+        EstadoActual      = Estado.Dormida;
+        Ruido             = 0f;
+        tContacto         = 0f;
+        tJugadorEscondido = 0f;
+        jugadorEscondido  = false;
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+    }
+
     void Update()
     {
         tContacto -= Time.deltaTime;

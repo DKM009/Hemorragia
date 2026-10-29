@@ -35,6 +35,7 @@ public class NotaLore : MonoBehaviour
     void Update()
     {
         if (!jugadorCerca) return;
+        UIMensaje.Pista(leida ? "[E] Releer nota" : "[E] Leer nota");
         if (PulsarInteraccion()) MostrarNota();
     }
 
@@ -55,7 +56,7 @@ public class NotaLore : MonoBehaviour
     void MostrarNota()
     {
         leida = true;
-        // TODO: en el siguiente sprint, enviar a un UIManager real
+        UIMensaje.Mostrar($"{titulo}\n{cuerpo}", 9f);
         Debug.Log($"[NOTA {numeroNota}] {titulo}\n{cuerpo}");
     }
 
