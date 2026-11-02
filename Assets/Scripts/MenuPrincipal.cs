@@ -37,6 +37,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void Jugar()
     {
+        if (CinematicaInicio.Reproducir(nombreEscenaJuego)) return;
         if (GestorJuego.Instancia != null)
             GestorJuego.Instancia.CargarEscena(nombreEscenaJuego);
         else

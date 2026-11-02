@@ -20,10 +20,13 @@ public static class ConfigurarAudio
         b.puerta       = Cargar("Puerta");
         b.maquina      = Cargar("Sonido_maquina");
 
+        b.cinematicaInicio = AssetDatabase.LoadAssetAtPath<UnityEngine.Video.VideoClip>("Assets/Cinematica/Hemorragia1.2.mp4");
+        if (b.cinematicaInicio == null) Debug.LogWarning("[Audio] No encontre Assets/Cinematica/Hemorragia1.2.mp4 como VideoClip");
+
         EditorUtility.SetDirty(b);
         AssetDatabase.SaveAssets();
         Debug.Log("[Audio] BancoAudio listo en " + ruta);
-        EditorUtility.DisplayDialog("Audio", "Banco de audio configurado.\nYa puedes dar Play.", "OK");
+        EditorUtility.DisplayDialog("Audio", "Banco de audio y cinematica configurados.\nYa puedes dar Play.", "OK");
     }
 
     static AudioClip Cargar(string n)

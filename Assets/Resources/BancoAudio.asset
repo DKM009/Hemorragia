@@ -19,6 +19,7 @@ MonoBehaviour:
   latidos: {fileID: 8300000, guid: b1e3626946f242140913189977d62dc0, type: 3}
   puerta: {fileID: 8300000, guid: 050c14465315d6e41b488ea23e41fcec, type: 3}
   maquina: {fileID: 8300000, guid: c67864c712d3eec438e3f80fae9d91d9, type: 3}
+  cinematicaInicio: {fileID: 32900000, guid: 72f393411752e7b409635a06ab7e0fe9, type: 3}
   volLatidos: 0.8
   volPuerta: 0.8
   volMaquina: 0.25

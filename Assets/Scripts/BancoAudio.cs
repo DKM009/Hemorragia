@@ -19,6 +19,9 @@ public class BancoAudio : ScriptableObject
     public AudioClip puerta;          // Puerta (puertas y cambio de cuarto)
     public AudioClip maquina;         // Sonido_maquina (fondo industrial)
 
+    [Header("Video")]
+    public UnityEngine.Video.VideoClip cinematicaInicio; // Hemorragia1.2.mp4
+
     [Header("Volumenes (0-1)")]
     [Range(0f, 1f)] public float volLatidos = 0.8f;
     [Range(0f, 1f)] public float volPuerta  = 0.8f;
