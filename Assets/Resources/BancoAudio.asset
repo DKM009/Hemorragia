@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37030ab8a0f8e464baac4d38b0c13470, type: 3}
+  m_Name: BancoAudio
+  m_EditorClassIdentifier: Assembly-CSharp::BancoAudio
+  menu: {fileID: 8300000, guid: 7f248cae664379246bdbfd8ddaf5a967, type: 3}
+  nivel1Inicio: {fileID: 8300000, guid: 40891198d4cf75543ae44b3a49129295, type: 3}
+  nivel1Resto: {fileID: 8300000, guid: 465d8813d3b32d446873b715e8f56279, type: 3}
+  nivel2: {fileID: 8300000, guid: 465d8813d3b32d446873b715e8f56279, type: 3}
+  latidos: {fileID: 8300000, guid: b1e3626946f242140913189977d62dc0, type: 3}
+  puerta: {fileID: 8300000, guid: 050c14465315d6e41b488ea23e41fcec, type: 3}
+  maquina: {fileID: 8300000, guid: c67864c712d3eec438e3f80fae9d91d9, type: 3}
+  cinematicaInicio: {fileID: 32900000, guid: 72f393411752e7b409635a06ab7e0fe9, type: 3}
+  volLatidos: 0.8
+  volPuerta: 0.8
+  volMaquina: 0.25
