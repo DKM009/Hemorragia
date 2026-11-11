@@ -71,6 +71,7 @@ public class Recolectable : MonoBehaviour
             }
         }
 
+        AudioAuto.Papel(false);
         gameObject.SetActive(false);
     }
 

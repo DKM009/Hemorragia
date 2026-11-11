@@ -18,6 +18,22 @@ public class CaidaCaldera : MonoBehaviour
     void Awake()
     {
         GetComponent<Collider2D>().isTrigger = true;
+        ColocarAlFinalDeLaLava();
+    }
+
+    // El trigger estaba en la zona B (antes de la lava). Se mueve al final de la zona C, despues de cruzar la lava.
+    void ColocarAlFinalDeLaLava()
+    {
+        var meta = GameObject.Find("Msg_N2C_Final");
+        if (meta == null) return;
+        transform.position = new Vector3(meta.transform.position.x + 1f, meta.transform.position.y, 0f);
+        var caja = GetComponent<BoxCollider2D>();
+        if (caja != null)
+        {
+            Vector3 e = transform.lossyScale;
+            caja.size = new Vector2(2f / Mathf.Max(0.01f, Mathf.Abs(e.x)), 10f / Mathf.Max(0.01f, Mathf.Abs(e.y)));
+            caja.offset = Vector2.zero;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D otro)
@@ -100,6 +116,22 @@ public class CaidaCaldera : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(0.6f);
+
+        // Jefe final: en vez de ir directo a la escena final, cae a la arena de La Masa
+        if (ArenaJefe.Disponible())
+        {
+            txt.text = "";
+            ArenaJefe.Comenzar(jugador);
+            t = 0f;
+            while (t < 1f)
+            {
+                t += Time.deltaTime / 1.4f;
+                img.color = new Color(0f, 0f, 0f, 1f - t);
+                yield return null;
+            }
+            Destroy(canvasGO);
+            yield break;
+        }
 
         string destino = Application.CanStreamedLevelBeLoaded(escenaFinal) ? escenaFinal : "MenuPrincipal";
         SceneManager.LoadScene(destino);

@@ -1,0 +1,847 @@
+fileFormatVersion: 2
+guid: 3d7942006c17d654e9ced396f9e47e94
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9202831048170122867
+    second: cables_techo_0
+  - first:
+      213: -5965540166958220870
+    second: cables_techo_1
+  - first:
+      213: -7071352671152014485
+    second: cables_techo_2
+  - first:
+      213: 6932403454616630037
+    second: cables_techo_3
+  - first:
+      213: -2407981966291828744
+    second: cables_techo_4
+  - first:
+      213: -7794125667294913928
+    second: cables_techo_5
+  - first:
+      213: 3570705514731480465
+    second: cables_techo_6
+  - first:
+      213: -4094052041025478602
+    second: cables_techo_7
+  - first:
+      213: -6572801549089474828
+    second: cables_techo_8
+  - first:
+      213: 7656099084183092051
+    second: cables_techo_9
+  - first:
+      213: 5438062238695737235
+    second: cables_techo_10
+  - first:
+      213: 5759463687013967408
+    second: cables_techo_11
+  - first:
+      213: 2411825983832719486
+    second: cables_techo_12
+  - first:
+      213: 3788086351116052246
+    second: cables_techo_13
+  - first:
+      213: -1496562949620810107
+    second: cables_techo_14
+  - first:
+      213: 6720597461217551975
+    second: cables_techo_15
+  - first:
+      213: -5939256917900798558
+    second: cables_techo_16
+  - first:
+      213: 247536212310175558
+    second: cables_techo_17
+  - first:
+      213: 7408343818490602121
+    second: cables_techo_18
+  - first:
+      213: -4435198075266922592
+    second: cables_techo_19
+  - first:
+      213: -207126594636378518
+    second: cables_techo_20
+  - first:
+      213: 735022916485950543
+    second: cables_techo_21
+  - first:
+      213: 946154914751131670
+    second: cables_techo_22
+  - first:
+      213: -3082824880096487433
+    second: cables_techo_23
+  - first:
+      213: 9199052415739457346
+    second: cables_techo_24
+  - first:
+      213: -510533444984277052
+    second: cables_techo_25
+  - first:
+      213: 6875512290964482840
+    second: cables_techo_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cables_techo_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 103
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8152ed9be9f84080800000000000000
+      internalID: -9202831048170122867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 103
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab9712f23d4263da0800000000000000
+      internalID: -5965540166958220870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 107
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6b797216328ddd90800000000000000
+      internalID: -7071352671152014485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_3
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 83
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5137d186638d43060800000000000000
+      internalID: 6932403454616630037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_4
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 99
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fff0a1e821259ed0800000000000000
+      internalID: -2407981966291828744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_5
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 108
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ad12a2004b5d390800000000000000
+      internalID: -7794125667294913928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_6
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 73
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 195291b4fb1bd8130800000000000000
+      internalID: 3570705514731480465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_7
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 107
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630a6b22c510f27c0800000000000000
+      internalID: -4094052041025478602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_8
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 98
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f67267b0d7b8c4a0800000000000000
+      internalID: -6572801549089474828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_9
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 99
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b3de5ad8def3a60800000000000000
+      internalID: 7656099084183092051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_10
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 104
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397cce34bc0e77b40800000000000000
+      internalID: 5438062238695737235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_11
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 105
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 036aa3955b9bdef40800000000000000
+      internalID: 5759463687013967408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_12
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 102
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e70086234f6887120800000000000000
+      internalID: 2411825983832719486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_13
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 82
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61727c8577cf19430800000000000000
+      internalID: 3788086351116052246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_14
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 83
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58e37db2de32b3be0800000000000000
+      internalID: -1496562949620810107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_15
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 100
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766a342a8cb544d50800000000000000
+      internalID: 6720597461217551975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_16
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 94
+        width: 23
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a5ddbafc45839da0800000000000000
+      internalID: -5939256917900798558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_17
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 98
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f2bc3afdc6f6300800000000000000
+      internalID: 247536212310175558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_18
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 76
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982e71ba379bfc660800000000000000
+      internalID: 7408343818490602121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_19
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 87
+        width: 6
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a7083769d20372c0800000000000000
+      internalID: -4435198075266922592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_20
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 63
+        width: 13
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e8927a573202df0800000000000000
+      internalID: -207126594636378518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_21
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 83
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4caaeeb273533a00800000000000000
+      internalID: 735022916485950543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_22
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 88
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6103b3cc1ea612d00800000000000000
+      internalID: 946154914751131670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 74
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f7dc15ea1b9735d0800000000000000
+      internalID: -3082824880096487433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_24
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 73
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f6956fe6999af70800000000000000
+      internalID: 9199052415739457346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_25
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 0
+        width: 335
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c771c569883ae8f0800000000000000
+      internalID: -510533444984277052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cables_techo_26
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 78
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81b25c7200aba6f50800000000000000
+      internalID: 6875512290964482840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      cables_techo_0: -9202831048170122867
+      cables_techo_1: -5965540166958220870
+      cables_techo_10: 5438062238695737235
+      cables_techo_11: 5759463687013967408
+      cables_techo_12: 2411825983832719486
+      cables_techo_13: 3788086351116052246
+      cables_techo_14: -1496562949620810107
+      cables_techo_15: 6720597461217551975
+      cables_techo_16: -5939256917900798558
+      cables_techo_17: 247536212310175558
+      cables_techo_18: 7408343818490602121
+      cables_techo_19: -4435198075266922592
+      cables_techo_2: -7071352671152014485
+      cables_techo_20: -207126594636378518
+      cables_techo_21: 735022916485950543
+      cables_techo_22: 946154914751131670
+      cables_techo_23: -3082824880096487433
+      cables_techo_24: 9199052415739457346
+      cables_techo_25: -510533444984277052
+      cables_techo_26: 6875512290964482840
+      cables_techo_3: 6932403454616630037
+      cables_techo_4: -2407981966291828744
+      cables_techo_5: -7794125667294913928
+      cables_techo_6: 3570705514731480465
+      cables_techo_7: -4094052041025478602
+      cables_techo_8: -6572801549089474828
+      cables_techo_9: 7656099084183092051
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

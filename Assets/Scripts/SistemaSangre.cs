@@ -183,13 +183,17 @@ public class SistemaSangre : MonoBehaviour
             // Sin prefab asignado: se genera una mancha oscura plana sobre el suelo
             charco = new GameObject("Charco");
             float y = pos.y - 0.3f;
+            bool haySuelo = false;
             foreach (var h in Physics2D.RaycastAll(pos, Vector2.down, 3f))
             {
                 if (h.collider == null || h.collider.isTrigger) continue;
                 if (h.collider.transform.IsChildOf(transform)) continue;
                 y = h.point.y + 0.03f;
+                haySuelo = true;
                 break;
             }
+            // En el aire no se dibuja mancha (antes quedaban rayas rojas flotando); el rastro si se registra
+            if (!haySuelo) { Destroy(charco); charco = null; goto registrar; }
             charco.transform.position   = new Vector3(pos.x, y, 0f);
             charco.transform.localScale = new Vector3(tamano * 1.6f, 0.12f, 1f);
             var sr = charco.AddComponent<SpriteRenderer>();
@@ -198,6 +202,7 @@ public class SistemaSangre : MonoBehaviour
             sr.sortingOrder = 2;
         }
 
+        registrar:
         // Registrar posicion para los Purgadores (max 30 charcos)
         rastroCharcos.Add(pos);
         tiemposCharcos.Add(Time.time);
@@ -208,7 +213,7 @@ public class SistemaSangre : MonoBehaviour
         }
 
         // El charco visual desaparece a los 60 s (y su rastro tambien, ver PurgarRastroViejo)
-        Destroy(charco, 60f);
+        if (charco != null) Destroy(charco, 60f);
     }
 
     /// <summary>Quita del rastro los charcos que ya desaparecieron.</summary>

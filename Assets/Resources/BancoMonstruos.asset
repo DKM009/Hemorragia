@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7705e16950f491b4bbd067a5fbc3baeb, type: 3}
+  m_Name: BancoMonstruos
+  m_EditorClassIdentifier: Assembly-CSharp::BancoMonstruos
+  esqueleto:
+    nombre: Esqueleto
+    idle: {fileID: 2800000, guid: 1018b0ba13578bf459bd254ae1a2be99, type: 3}
+    mover: {fileID: 2800000, guid: c5b15ca3a0987ac46b73e4a04e12eeb2, type: 3}
+    ataque: {fileID: 2800000, guid: 5f19f67e94a2e2f4ba57d2b338387c11, type: 3}
+    celda: 150
+    ppu: 50
+    pivotX: 0.55
+    pixelesBajoPies: 49
+    collider: {x: 0.5, y: 1}
+    fpsIdle: 6
+    fpsMover: 8
+    fpsAtaque: 10
+  goblin:
+    nombre: Goblin
+    idle: {fileID: 2800000, guid: c1cdd26cc09ad224884556bc4d8296ae, type: 3}
+    mover: {fileID: 2800000, guid: 048dae4a3e3ffa741b83654644b60a16, type: 3}
+    ataque: {fileID: 2800000, guid: f84c06efa9991bd49b5553f54f400348, type: 3}
+    celda: 150
+    ppu: 50
+    pivotX: 0.5
+    pixelesBajoPies: 49
+    collider: {x: 0.45, y: 0.75}
+    fpsIdle: 6
+    fpsMover: 11
+    fpsAtaque: 10
+  hongo:
+    nombre: Hongo
+    idle: {fileID: 2800000, guid: f8b30c2afe165d645b54d500a9c30862, type: 3}
+    mover: {fileID: 2800000, guid: c6ac0078f39473048b9f54d791095f35, type: 3}
+    ataque: {fileID: 2800000, guid: 5cdfcef2d5ef97347a8d7935407f81ab, type: 3}
+    celda: 150
+    ppu: 50
+    pivotX: 0.5
+    pixelesBajoPies: 49
+    collider: {x: 0.5, y: 0.78}
+    fpsIdle: 6
+    fpsMover: 10
+    fpsAtaque: 10
+  jefeFuego: {fileID: 2800000, guid: f351deaece37cc44397119dc7d13cf86, type: 3}
+  jefePpu: 145
+  jefeCollider: {x: 0.7, y: 1.9}
+  jefeLuz: {r: 1, g: 0.45, b: 0.1, a: 1}

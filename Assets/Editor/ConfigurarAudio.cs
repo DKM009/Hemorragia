@@ -20,6 +20,17 @@ public static class ConfigurarAudio
         b.puerta       = Cargar("Puerta");
         b.maquina      = Cargar("Sonido_maquina");
 
+        b.pasos        = Cargar("Pasos");
+        b.correr       = Cargar("Correr");
+        b.grito        = Cargar("Grito");
+        b.latas        = Cargar("Latas");
+        b.lava         = Cargar("Lava");
+        b.lavaQuemando = Cargar("Lava_Quemando");
+        b.papel1       = Cargar("Papel_1");
+        b.papel2       = Cargar("Papel_2");
+        b.rugido1      = Cargar("Rugido_1");
+        b.rugido2      = Cargar("Rugido_2");
+
         b.cinematicaInicio = AssetDatabase.LoadAssetAtPath<UnityEngine.Video.VideoClip>("Assets/Cinematica/Hemorragia1.2.mp4");
         if (b.cinematicaInicio == null) Debug.LogWarning("[Audio] No encontre Assets/Cinematica/Hemorragia1.2.mp4 como VideoClip");
 
@@ -32,7 +43,8 @@ public static class ConfigurarAudio
     static AudioClip Cargar(string n)
     {
         var c = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audios/" + n + ".mp3");
-        if (c == null) Debug.LogWarning("[Audio] No encontre Assets/Audios/" + n + ".mp3");
+        if (c == null) c = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audios/" + n + ".wav");
+        if (c == null) Debug.LogWarning("[Audio] No encontre Assets/Audios/" + n + " (.mp3 / .wav)");
         return c;
     }
 }

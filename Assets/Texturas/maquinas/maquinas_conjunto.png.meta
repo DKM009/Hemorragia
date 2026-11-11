@@ -1,0 +1,1003 @@
+fileFormatVersion: 2
+guid: 448c94d3e987d4b40b9583ea06e3f77c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5317261601812609301
+    second: maquinas_conjunto_0
+  - first:
+      213: -8761210203525131642
+    second: maquinas_conjunto_1
+  - first:
+      213: -8824374848429232989
+    second: maquinas_conjunto_2
+  - first:
+      213: -1044344171319713293
+    second: maquinas_conjunto_3
+  - first:
+      213: 3849098313680894224
+    second: maquinas_conjunto_4
+  - first:
+      213: -8546372243151459065
+    second: maquinas_conjunto_5
+  - first:
+      213: 50130188750032857
+    second: maquinas_conjunto_6
+  - first:
+      213: 4212775223262305630
+    second: maquinas_conjunto_7
+  - first:
+      213: 3179123968038744915
+    second: maquinas_conjunto_8
+  - first:
+      213: -5724232317034500413
+    second: maquinas_conjunto_9
+  - first:
+      213: 5435673668174921489
+    second: maquinas_conjunto_10
+  - first:
+      213: -7823984961348180021
+    second: maquinas_conjunto_11
+  - first:
+      213: -7343135744178667720
+    second: maquinas_conjunto_12
+  - first:
+      213: 3520108778670192579
+    second: maquinas_conjunto_13
+  - first:
+      213: 7522385743523085302
+    second: maquinas_conjunto_14
+  - first:
+      213: 8690357700325507490
+    second: maquinas_conjunto_15
+  - first:
+      213: -1966498221368792717
+    second: maquinas_conjunto_16
+  - first:
+      213: -5173443120251972727
+    second: maquinas_conjunto_17
+  - first:
+      213: -1032038343886069440
+    second: maquinas_conjunto_18
+  - first:
+      213: 3289930926244942013
+    second: maquinas_conjunto_19
+  - first:
+      213: -2330647450784855729
+    second: maquinas_conjunto_20
+  - first:
+      213: 1094830683502628412
+    second: maquinas_conjunto_21
+  - first:
+      213: -1594812769514575528
+    second: maquinas_conjunto_22
+  - first:
+      213: -8643008362741549242
+    second: maquinas_conjunto_23
+  - first:
+      213: 3723221838688774860
+    second: maquinas_conjunto_24
+  - first:
+      213: 9055133991077145206
+    second: maquinas_conjunto_25
+  - first:
+      213: -6511101052225206824
+    second: maquinas_conjunto_26
+  - first:
+      213: -2371342310874759853
+    second: maquinas_conjunto_27
+  - first:
+      213: -6750161130947062761
+    second: maquinas_conjunto_28
+  - first:
+      213: 1747355115681858234
+    second: maquinas_conjunto_29
+  - first:
+      213: -7478734685738489335
+    second: maquinas_conjunto_30
+  - first:
+      213: -4174847571619591405
+    second: maquinas_conjunto_31
+  - first:
+      213: -4415704570999569212
+    second: maquinas_conjunto_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: maquinas_conjunto_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 204
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5197dd93145bac940800000000000000
+      internalID: 5317261601812609301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 408
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6825b502dbde96680800000000000000
+      internalID: -8761210203525131642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_2
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 401
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aceb7234d5898580800000000000000
+      internalID: -8824374848429232989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_3
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 402
+        width: 45
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f12d35628eb181f0800000000000000
+      internalID: -1044344171319713293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_4
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 90
+        width: 159
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019318cd58eba6530800000000000000
+      internalID: 3849098313680894224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_5
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 267
+        width: 68
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70de2b8b9bf256980800000000000000
+      internalID: -8546372243151459065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_6
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 118
+        width: 211
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df08fc142912b000800000000000000
+      internalID: 50130188750032857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_7
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 349
+        width: 181
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5ddd1dceb8c67a30800000000000000
+      internalID: 4212775223262305630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_8
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 103
+        width: 89
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35331ebb7648e1c20800000000000000
+      internalID: 3179123968038744915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_9
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 35
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cee85339017f80b0800000000000000
+      internalID: -5724232317034500413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_10
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 282
+        width: 6
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11fb28ad6646f6b40800000000000000
+      internalID: 5435673668174921489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_11
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 277
+        width: 31
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc7e7d2812f9b6390800000000000000
+      internalID: -7823984961348180021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_12
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 187
+        width: 49
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83fb1ce32f0f71a90800000000000000
+      internalID: -7343135744178667720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_13
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 273
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c7fe5ba840f9d030800000000000000
+      internalID: 3520108778670192579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_14
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 256
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fbf72a7af1e46860800000000000000
+      internalID: 7522385743523085302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_15
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 198
+        width: 13
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a18bf2f84a5a9870800000000000000
+      internalID: 8690357700325507490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_16
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 256
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37920ef594895b4e0800000000000000
+      internalID: -1966498221368792717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_17
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 13
+        width: 343
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98351b764ec3438b0800000000000000
+      internalID: -5173443120251972727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_18
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 162
+        width: 10
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041a61e18967da1f0800000000000000
+      internalID: -1032038343886069440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_19
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 111
+        width: 80
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db0d6622fbe28ad20800000000000000
+      internalID: 3289930926244942013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_20
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 129
+        width: 90
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f498c47ed70e7afd0800000000000000
+      internalID: -2330647450784855729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15
+        width: 106
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3e4f5bb4be913f00800000000000000
+      internalID: 1094830683502628412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_22
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 17
+        width: 168
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 859a3dd5c361ed9e0800000000000000
+      internalID: -1594812769514575528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_23
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 27
+        width: 203
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6473f0ccfaddd0880800000000000000
+      internalID: -8643008362741549242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_24
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 47
+        width: 97
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca650b298a8ba330800000000000000
+      internalID: 3723221838688774860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_25
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 107
+        width: 27
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67ae7b3836c4aad70800000000000000
+      internalID: 9055133991077145206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_26
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 73
+        width: 42
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d5c17d171ce3a5a0800000000000000
+      internalID: -6511101052225206824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_27
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 26
+        width: 38
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35db47f6bbc471fd0800000000000000
+      internalID: -2371342310874759853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_28
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 74
+        width: 35
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 714504d173c9252a0800000000000000
+      internalID: -6750161130947062761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_29
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 0
+        width: 82
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2cda6483adf3810800000000000000
+      internalID: 1747355115681858234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_30
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 0
+        width: 126
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90a2a276d62363890800000000000000
+      internalID: -7478734685738489335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_31
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 14
+        width: 45
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31b463eb046ff06c0800000000000000
+      internalID: -4174847571619591405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinas_conjunto_32
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 5
+        width: 105
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4808c861448b2c0800000000000000
+      internalID: -4415704570999569212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      maquinas_conjunto_0: 5317261601812609301
+      maquinas_conjunto_1: -8761210203525131642
+      maquinas_conjunto_10: 5435673668174921489
+      maquinas_conjunto_11: -7823984961348180021
+      maquinas_conjunto_12: -7343135744178667720
+      maquinas_conjunto_13: 3520108778670192579
+      maquinas_conjunto_14: 7522385743523085302
+      maquinas_conjunto_15: 8690357700325507490
+      maquinas_conjunto_16: -1966498221368792717
+      maquinas_conjunto_17: -5173443120251972727
+      maquinas_conjunto_18: -1032038343886069440
+      maquinas_conjunto_19: 3289930926244942013
+      maquinas_conjunto_2: -8824374848429232989
+      maquinas_conjunto_20: -2330647450784855729
+      maquinas_conjunto_21: 1094830683502628412
+      maquinas_conjunto_22: -1594812769514575528
+      maquinas_conjunto_23: -8643008362741549242
+      maquinas_conjunto_24: 3723221838688774860
+      maquinas_conjunto_25: 9055133991077145206
+      maquinas_conjunto_26: -6511101052225206824
+      maquinas_conjunto_27: -2371342310874759853
+      maquinas_conjunto_28: -6750161130947062761
+      maquinas_conjunto_29: 1747355115681858234
+      maquinas_conjunto_3: -1044344171319713293
+      maquinas_conjunto_30: -7478734685738489335
+      maquinas_conjunto_31: -4174847571619591405
+      maquinas_conjunto_32: -4415704570999569212
+      maquinas_conjunto_4: 3849098313680894224
+      maquinas_conjunto_5: -8546372243151459065
+      maquinas_conjunto_6: 50130188750032857
+      maquinas_conjunto_7: 4212775223262305630
+      maquinas_conjunto_8: 3179123968038744915
+      maquinas_conjunto_9: -5724232317034500413
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

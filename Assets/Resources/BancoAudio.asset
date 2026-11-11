@@ -19,7 +19,25 @@ MonoBehaviour:
   latidos: {fileID: 8300000, guid: b1e3626946f242140913189977d62dc0, type: 3}
   puerta: {fileID: 8300000, guid: 050c14465315d6e41b488ea23e41fcec, type: 3}
   maquina: {fileID: 8300000, guid: c67864c712d3eec438e3f80fae9d91d9, type: 3}
+  pasos: {fileID: 8300000, guid: 3dee6054f9e54db409bd7bbb2acef94e, type: 3}
+  correr: {fileID: 8300000, guid: 2243269ab260dda4bad6ae85272be1c0, type: 3}
+  grito: {fileID: 8300000, guid: e3f0fdab73551ce4dae2c5e7f202d930, type: 3}
+  latas: {fileID: 8300000, guid: e4c9d828e6249ca4d8a3c3eaa0936400, type: 3}
+  lava: {fileID: 8300000, guid: 16fe7fac28024864bab93dba9f2fdfc8, type: 3}
+  lavaQuemando: {fileID: 8300000, guid: 2e0747bde53f1bc4082f1543bb2ac08c, type: 3}
+  papel1: {fileID: 8300000, guid: 0597d83f62c96a646aa254cbdcb5db07, type: 3}
+  papel2: {fileID: 8300000, guid: d1f12e61e9dae9d4ab5ce9fe544460ad, type: 3}
+  rugido1: {fileID: 8300000, guid: 4cbaf7ca6e3b6894288d502dd0f56bd9, type: 3}
+  rugido2: {fileID: 8300000, guid: 97d4cd29fc278ab4f8f771bf3fa9ca52, type: 3}
   cinematicaInicio: {fileID: 32900000, guid: 72f393411752e7b409635a06ab7e0fe9, type: 3}
   volLatidos: 0.8
   volPuerta: 0.8
   volMaquina: 0.25
+  volPasos: 0.45
+  volCorrer: 0.55
+  volGrito: 0.9
+  volLatas: 0.9
+  volLava: 0.5
+  volLavaQuemando: 0.9
+  volPapel: 0.7
+  volRugido: 0.8

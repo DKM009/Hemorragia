@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95cda0661e69f12479f873bda21b183b, type: 3}
+  m_Name: BancoEnemigos
+  m_EditorClassIdentifier: Assembly-CSharp::BancoEnemigos
+  reptanteIdle: {fileID: 2800000, guid: a1113f6d1291e15489743a2b45e5600f, type: 3}
+  reptanteCaminar: {fileID: 2800000, guid: ed15809b7f4623446bb3df2815431303, type: 3}
+  reptanteAtaque: {fileID: 2800000, guid: 9babb1877d048c44680f75967172f533, type: 3}
+  hazmatIdle: {fileID: 2800000, guid: b6a642c21c5f6664a94f617b53e33258, type: 3}
+  hazmatCaminar: {fileID: 2800000, guid: c908d740e47b87a448beef9160544441, type: 3}
+  hazmatAtaque: {fileID: 2800000, guid: 963050a787b3efd469af105a067270ba, type: 3}
+  rojaIdle: {fileID: 2800000, guid: 236929f93575ce140a5e727ed3bb271e, type: 3}
+  rojaCaminar: {fileID: 2800000, guid: c39c674b8c7a19746bd1ab48becd4c96, type: 3}
+  rojaAtaque: {fileID: 2800000, guid: 8046151847b761c419e0553efc125786, type: 3}
+  celda: 256
+  ppu: 100
+  pixelesBajoPies: 4

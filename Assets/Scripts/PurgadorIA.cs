@@ -134,6 +134,8 @@ public class PurgadorIA : MonoBehaviour
     /// <summary>Vuelve al estado inicial (tras morir el jugador).</summary>
     public void Reiniciar()
     {
+        var salud = GetComponent<SaludEnemigo>();
+        if (salud != null) salud.Revivir();
         EstadoActual        = Estado.Patrullar;
         tInvestigar         = 0f;
         tSinRastro          = 0f;

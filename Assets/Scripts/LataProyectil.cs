@@ -1,14 +1,15 @@
 using UnityEngine;
 
 /// <summary>
-/// Lata lanzada: al chocar con algo hace ruido. Los Purgadores dentro del radio
-/// van a investigar el punto de impacto y La Fosa tambien lo escucha.
+/// Lata lanzada: al chocar hace ruido (los Purgadores cercanos van a investigar) y,
+/// si golpea directamente a un enemigo, le quita vida.
 /// </summary>
 public class LataProyectil : MonoBehaviour
 {
     public float ruido           = 30f;
     public float radioAtraccion  = 14f;
     public float segundosInvestigar = 6f;
+    public float dano            = 1f;
 
     bool impactado;
 
@@ -19,6 +20,10 @@ public class LataProyectil : MonoBehaviour
 
         Vector2 punto = transform.position;
         GestorRuido.Emitir(ruido, punto);
+        AudioAuto.Lata();
+
+        var salud = col.collider.GetComponentInParent<SaludEnemigo>();
+        if (salud != null && !salud.Muerto) salud.RecibirDano(dano, punto);
 
         foreach (var purgador in FindObjectsByType<PurgadorIA>(FindObjectsSortMode.None))
         {

@@ -19,6 +19,18 @@ public class BancoAudio : ScriptableObject
     public AudioClip puerta;          // Puerta (puertas y cambio de cuarto)
     public AudioClip maquina;         // Sonido_maquina (fondo industrial)
 
+    [Header("Efectos nuevos (Pedro)")]
+    public AudioClip pasos;           // Pasos (loop al caminar)
+    public AudioClip correr;          // Correr (loop al correr)
+    public AudioClip grito;           // Grito (al morir)
+    public AudioClip latas;           // Latas (impacto de la lata)
+    public AudioClip lava;            // Lava (ambiente cerca de lava, loop)
+    public AudioClip lavaQuemando;    // Lava_Quemando (al caer en lava)
+    public AudioClip papel1;          // Papel_1 (recoger objetos)
+    public AudioClip papel2;          // Papel_2 (leer notas)
+    public AudioClip rugido1;         // Rugido_1 (enemigo te detecta)
+    public AudioClip rugido2;         // Rugido_2 (enemigo te detecta / muere)
+
     [Header("Video")]
     public UnityEngine.Video.VideoClip cinematicaInicio; // Hemorragia1.2.mp4
 
@@ -26,4 +38,12 @@ public class BancoAudio : ScriptableObject
     [Range(0f, 1f)] public float volLatidos = 0.8f;
     [Range(0f, 1f)] public float volPuerta  = 0.8f;
     [Range(0f, 1f)] public float volMaquina = 0.25f;
+    [Range(0f, 1f)] public float volPasos   = 0.45f;
+    [Range(0f, 1f)] public float volCorrer  = 0.55f;
+    [Range(0f, 1f)] public float volGrito   = 0.9f;
+    [Range(0f, 1f)] public float volLatas   = 0.9f;
+    [Range(0f, 1f)] public float volLava    = 0.5f;
+    [Range(0f, 1f)] public float volLavaQuemando = 0.9f;
+    [Range(0f, 1f)] public float volPapel   = 0.7f;
+    [Range(0f, 1f)] public float volRugido  = 0.8f;
 }

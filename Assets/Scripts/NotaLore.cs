@@ -56,6 +56,7 @@ public class NotaLore : MonoBehaviour
     void MostrarNota()
     {
         leida = true;
+        AudioAuto.Papel(true);
         UIMensaje.Mostrar($"{titulo}\n{cuerpo}", 9f);
         Debug.Log($"[NOTA {numeroNota}] {titulo}\n{cuerpo}");
     }

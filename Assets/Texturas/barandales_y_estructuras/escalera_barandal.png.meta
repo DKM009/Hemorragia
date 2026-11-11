@@ -1,0 +1,951 @@
+fileFormatVersion: 2
+guid: e3dfb3471d2fc8c49b46b0002f3e247c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8044081508111556805
+    second: escalera_barandal_0
+  - first:
+      213: -8098819190858308340
+    second: escalera_barandal_1
+  - first:
+      213: -3435737074279679115
+    second: escalera_barandal_2
+  - first:
+      213: -1275761786067501857
+    second: escalera_barandal_3
+  - first:
+      213: 6344751279354547538
+    second: escalera_barandal_4
+  - first:
+      213: -4803435583829389221
+    second: escalera_barandal_5
+  - first:
+      213: -8039553438565326335
+    second: escalera_barandal_6
+  - first:
+      213: -4509619555274499823
+    second: escalera_barandal_7
+  - first:
+      213: -8458178652147817188
+    second: escalera_barandal_8
+  - first:
+      213: 4779619849604682732
+    second: escalera_barandal_9
+  - first:
+      213: 3431308332436590790
+    second: escalera_barandal_10
+  - first:
+      213: -2923306090054703207
+    second: escalera_barandal_11
+  - first:
+      213: -3863747981933314118
+    second: escalera_barandal_12
+  - first:
+      213: -684463912351422243
+    second: escalera_barandal_13
+  - first:
+      213: -909587484386337691
+    second: escalera_barandal_14
+  - first:
+      213: -1088804115405717721
+    second: escalera_barandal_15
+  - first:
+      213: 2217391661075033010
+    second: escalera_barandal_16
+  - first:
+      213: 2707046268322093493
+    second: escalera_barandal_17
+  - first:
+      213: -7507506425175349532
+    second: escalera_barandal_18
+  - first:
+      213: 1979204986052469512
+    second: escalera_barandal_19
+  - first:
+      213: -7985366703015295268
+    second: escalera_barandal_20
+  - first:
+      213: 5738247098456622905
+    second: escalera_barandal_21
+  - first:
+      213: 505585177808406510
+    second: escalera_barandal_22
+  - first:
+      213: 8337817951608710666
+    second: escalera_barandal_23
+  - first:
+      213: -5731890155996514653
+    second: escalera_barandal_24
+  - first:
+      213: 6369791609484780143
+    second: escalera_barandal_25
+  - first:
+      213: 4463558949041038466
+    second: escalera_barandal_26
+  - first:
+      213: 2895209223243685584
+    second: escalera_barandal_27
+  - first:
+      213: 3573517199358650703
+    second: escalera_barandal_28
+  - first:
+      213: -5281415732995187543
+    second: escalera_barandal_29
+  - first:
+      213: -5457507797862583102
+    second: escalera_barandal_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: escalera_barandal_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 241
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c02743238152af60800000000000000
+      internalID: 8044081508111556805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_1
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 244
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0526c4fad63b9f80800000000000000
+      internalID: -8098819190858308340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 253
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57b7be1955fc150d0800000000000000
+      internalID: -3435737074279679115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_3
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 246
+        width: 44
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdcbd633a659b4ee0800000000000000
+      internalID: -1275761786067501857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_4
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 245
+        width: 24
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d02223ca51d0850800000000000000
+      internalID: 6344751279354547538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_5
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 244
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50d06449c4c65db0800000000000000
+      internalID: -4803435583829389221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_6
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 248
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1022b853eb4cd6090800000000000000
+      internalID: -8039553438565326335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 223
+        width: 40
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11955bf48ec9a61c0800000000000000
+      internalID: -4509619555274499823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_8
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 234
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c15efe744538e9a80800000000000000
+      internalID: -8458178652147817188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_9
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 237
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce3d7110eee945240800000000000000
+      internalID: 4779619849604682732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_10
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 223
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c098bd9fb47e9f20800000000000000
+      internalID: 3431308332436590790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_11
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 224
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997ad8479945e67d0800000000000000
+      internalID: -2923306090054703207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_12
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 211
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf7b337ea5316ac0800000000000000
+      internalID: -3863747981933314118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_13
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 237
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd828bab2bb4086f0800000000000000
+      internalID: -684463912351422243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_14
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 237
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56cd20d800f7063f0800000000000000
+      internalID: -909587484386337691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_15
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 229
+        width: 23
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f324ffc6ac3e0f0800000000000000
+      internalID: -1088804115405717721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_16
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 212
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb6a4ea7f1c5ce10800000000000000
+      internalID: 2217391661075033010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_17
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 236
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b992ed0d3c519520800000000000000
+      internalID: 2707046268322093493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_18
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 210
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e6e57aceaaffc790800000000000000
+      internalID: -7507506425175349532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_19
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 212
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 803e653d27c877b10800000000000000
+      internalID: 1979204986052469512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_20
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 225
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd68a89ba474e2190800000000000000
+      internalID: -7985366703015295268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_21
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 205
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9374ce0655952af40800000000000000
+      internalID: 5738247098456622905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_22
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 213
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee709fe5a03340700800000000000000
+      internalID: 505585177808406510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_23
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 215
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0623875041e5b370800000000000000
+      internalID: 8337817951608710666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_24
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 208
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a6f440a54c3470b0800000000000000
+      internalID: -5731890155996514653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_25
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 211
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f62aa9068bb066850800000000000000
+      internalID: 6369791609484780143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 259
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2846b97173fb1fd30800000000000000
+      internalID: 4463558949041038466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_27
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 181
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dedfd5f279dd2820800000000000000
+      internalID: 2895209223243685584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_28
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 206
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f496582a5fea79130800000000000000
+      internalID: 3573517199358650703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_29
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 208
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ac99ab7f54a4b6b0800000000000000
+      internalID: -5281415732995187543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: escalera_barandal_30
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 199
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c4f97da2990344b0800000000000000
+      internalID: -5457507797862583102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      escalera_barandal_0: 8044081508111556805
+      escalera_barandal_1: -8098819190858308340
+      escalera_barandal_10: 3431308332436590790
+      escalera_barandal_11: -2923306090054703207
+      escalera_barandal_12: -3863747981933314118
+      escalera_barandal_13: -684463912351422243
+      escalera_barandal_14: -909587484386337691
+      escalera_barandal_15: -1088804115405717721
+      escalera_barandal_16: 2217391661075033010
+      escalera_barandal_17: 2707046268322093493
+      escalera_barandal_18: -7507506425175349532
+      escalera_barandal_19: 1979204986052469512
+      escalera_barandal_2: -3435737074279679115
+      escalera_barandal_20: -7985366703015295268
+      escalera_barandal_21: 5738247098456622905
+      escalera_barandal_22: 505585177808406510
+      escalera_barandal_23: 8337817951608710666
+      escalera_barandal_24: -5731890155996514653
+      escalera_barandal_25: 6369791609484780143
+      escalera_barandal_26: 4463558949041038466
+      escalera_barandal_27: 2895209223243685584
+      escalera_barandal_28: 3573517199358650703
+      escalera_barandal_29: -5281415732995187543
+      escalera_barandal_3: -1275761786067501857
+      escalera_barandal_30: -5457507797862583102
+      escalera_barandal_4: 6344751279354547538
+      escalera_barandal_5: -4803435583829389221
+      escalera_barandal_6: -8039553438565326335
+      escalera_barandal_7: -4509619555274499823
+      escalera_barandal_8: -8458178652147817188
+      escalera_barandal_9: 4779619849604682732
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

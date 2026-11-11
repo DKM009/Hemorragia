@@ -1,0 +1,1861 @@
+fileFormatVersion: 2
+guid: 8dd4b6bfdbada2e4988d66fa62ef3a82
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 793591998763088723
+    second: reja_3_0
+  - first:
+      213: -4889262771372493861
+    second: reja_3_1
+  - first:
+      213: -6325100131228911578
+    second: reja_3_2
+  - first:
+      213: -607351888850905864
+    second: reja_3_3
+  - first:
+      213: -4125266417950691113
+    second: reja_3_4
+  - first:
+      213: -8018731122570044374
+    second: reja_3_5
+  - first:
+      213: 1409722545087482172
+    second: reja_3_6
+  - first:
+      213: 2158009036258177385
+    second: reja_3_7
+  - first:
+      213: -8756808995025342910
+    second: reja_3_8
+  - first:
+      213: -574401410105245015
+    second: reja_3_9
+  - first:
+      213: 6312060116355181352
+    second: reja_3_10
+  - first:
+      213: -2776160503621347304
+    second: reja_3_11
+  - first:
+      213: 5666377317654355314
+    second: reja_3_12
+  - first:
+      213: -2014777922697274881
+    second: reja_3_13
+  - first:
+      213: 8937692359446319711
+    second: reja_3_14
+  - first:
+      213: 6231181753096717847
+    second: reja_3_15
+  - first:
+      213: 93188238192583723
+    second: reja_3_16
+  - first:
+      213: 4066889398059888951
+    second: reja_3_17
+  - first:
+      213: -1521733163767392789
+    second: reja_3_18
+  - first:
+      213: 7563597401414869287
+    second: reja_3_19
+  - first:
+      213: 1648329972878010950
+    second: reja_3_20
+  - first:
+      213: -3649386312792201891
+    second: reja_3_21
+  - first:
+      213: 3361807396902483354
+    second: reja_3_22
+  - first:
+      213: -2495311806330650399
+    second: reja_3_23
+  - first:
+      213: 7177570835868087488
+    second: reja_3_24
+  - first:
+      213: -6828433389759850888
+    second: reja_3_25
+  - first:
+      213: -1393821593697802076
+    second: reja_3_26
+  - first:
+      213: -2098212025435390259
+    second: reja_3_27
+  - first:
+      213: -6517418566237524386
+    second: reja_3_28
+  - first:
+      213: 2927907890679134946
+    second: reja_3_29
+  - first:
+      213: 1304721000754684980
+    second: reja_3_30
+  - first:
+      213: -4384774015883801783
+    second: reja_3_31
+  - first:
+      213: -1238411252817015088
+    second: reja_3_32
+  - first:
+      213: 9061627178991261615
+    second: reja_3_33
+  - first:
+      213: -2936173985957534694
+    second: reja_3_34
+  - first:
+      213: 8741033418152377986
+    second: reja_3_35
+  - first:
+      213: -6024099868937266530
+    second: reja_3_36
+  - first:
+      213: -870184423978763534
+    second: reja_3_37
+  - first:
+      213: 5437866878837933407
+    second: reja_3_38
+  - first:
+      213: 2914569265789629820
+    second: reja_3_39
+  - first:
+      213: -7077623709348083332
+    second: reja_3_40
+  - first:
+      213: -3013763261650830771
+    second: reja_3_41
+  - first:
+      213: 5253845263272728262
+    second: reja_3_42
+  - first:
+      213: 175788188158295758
+    second: reja_3_43
+  - first:
+      213: -7662333009861830489
+    second: reja_3_44
+  - first:
+      213: -1296550881292069081
+    second: reja_3_45
+  - first:
+      213: 6916830067383298349
+    second: reja_3_46
+  - first:
+      213: -8669773944995360509
+    second: reja_3_47
+  - first:
+      213: 473557114524822599
+    second: reja_3_48
+  - first:
+      213: -6109075212086569985
+    second: reja_3_49
+  - first:
+      213: 2209892306508970001
+    second: reja_3_50
+  - first:
+      213: -9109229995882336986
+    second: reja_3_51
+  - first:
+      213: -5477271915545619194
+    second: reja_3_52
+  - first:
+      213: -1644736875288324992
+    second: reja_3_53
+  - first:
+      213: 2285899806194932348
+    second: reja_3_54
+  - first:
+      213: 5280922727575399801
+    second: reja_3_55
+  - first:
+      213: 5747702414593255593
+    second: reja_3_56
+  - first:
+      213: -6438977484606221197
+    second: reja_3_57
+  - first:
+      213: 5523133663176174505
+    second: reja_3_58
+  - first:
+      213: 8342704122696339272
+    second: reja_3_59
+  - first:
+      213: -5826817434684805979
+    second: reja_3_60
+  - first:
+      213: -3390250426345367523
+    second: reja_3_61
+  - first:
+      213: 9178024310374963462
+    second: reja_3_62
+  - first:
+      213: -3372293798094377361
+    second: reja_3_63
+  - first:
+      213: 1136718583544634937
+    second: reja_3_64
+  - first:
+      213: -6680806039336333961
+    second: reja_3_65
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: reja_3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 12
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bbdded7b7630b00800000000000000
+      internalID: 793591998763088723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 132
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3fcc2f969d52cb0800000000000000
+      internalID: -4889262771372493861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 138
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628f25541fab838a0800000000000000
+      internalID: -6325100131228911578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 130
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f4116bcca04297f0800000000000000
+      internalID: -607351888850905864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_4
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 120
+        width: 15
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d0733aac0c10c6c0800000000000000
+      internalID: -4125266417950691113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_5
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 0
+        width: 12
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2cd7d1778eb7b090800000000000000
+      internalID: -8018731122570044374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_6
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 108
+        width: 96
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c398ccb8f27509310800000000000000
+      internalID: 1409722545087482172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_7
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 94
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 961704ce8c9c2fd10800000000000000
+      internalID: 2158009036258177385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_8
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 98
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24ea1955d90997680800000000000000
+      internalID: -8756808995025342910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_9
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 85
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a28138f5f05708f0800000000000000
+      internalID: -574401410105245015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_10
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 94
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82be24cab31f89750800000000000000
+      internalID: 6312060116355181352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_11
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 94
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8181e2e0bb81979d0800000000000000
+      internalID: -2776160503621347304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_12
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 89
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d5e1e062403ae40800000000000000
+      internalID: 5666377317654355314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9545077221a04e0800000000000000
+      internalID: -2014777922697274881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_14
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 98
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f525584d8df090c70800000000000000
+      internalID: 8937692359446319711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 95
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716c93c4aca997650800000000000000
+      internalID: 6231181753096717847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_16
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 91
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b24a6ba75321b4100800000000000000
+      internalID: 93188238192583723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_17
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 85
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73179283c5e707830800000000000000
+      internalID: 4066889398059888951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_18
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 96
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be596b200c7b1eae0800000000000000
+      internalID: -1521733163767392789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_19
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 78
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721a66f43cb47f860800000000000000
+      internalID: 7563597401414869287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_20
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 77
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ae50a806b00e610800000000000000
+      internalID: 1648329972878010950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_21
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 82
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5529d9db76ca5dc0800000000000000
+      internalID: -3649386312792201891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_22
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 78
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9537af040a87ae20800000000000000
+      internalID: 3361807396902483354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_23
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 68
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e0c2d3022fde5dd0800000000000000
+      internalID: -2495311806330650399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_24
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 80
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c4fe1695aadb9360800000000000000
+      internalID: 7177570835868087488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_25
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 84
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87692f6b2088c31a0800000000000000
+      internalID: -6828433389759850888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_26
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 82
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a8af5335a628ace0800000000000000
+      internalID: -1393821593697802076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_27
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 77
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dce78789747a1e2e0800000000000000
+      internalID: -2098212025435390259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_28
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 63
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e60e2485a7d85a0800000000000000
+      internalID: -6517418566237524386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_29
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 68
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea3efeb6b402a820800000000000000
+      internalID: 2927907890679134946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_30
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 56
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434a9f466dc4b1210800000000000000
+      internalID: 1304721000754684980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_31
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 62
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b02ea93472623c0800000000000000
+      internalID: -4384774015883801783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_32
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 62
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0decef5e68740dee0800000000000000
+      internalID: -1238411252817015088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_33
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 67
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa79cc2a8ed51cd70800000000000000
+      internalID: 9061627178991261615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_34
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 60
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a142248f05d9047d0800000000000000
+      internalID: -2936173985957534694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_35
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 51
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28e7ac2f4936e4970800000000000000
+      internalID: 8741033418152377986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_36
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 49
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9a54841619166ca0800000000000000
+      internalID: -6024099868937266530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_37
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 50
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fafaa770eb7ce3f0800000000000000
+      internalID: -870184423978763534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_38
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 55
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f554ff08d1f277b40800000000000000
+      internalID: 5437866878837933407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_39
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 51
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7579a02e41a27820800000000000000
+      internalID: 2914569265789629820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_40
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 51
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79cc663cba37cd90800000000000000
+      internalID: -7077623709348083332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_41
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 40
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4afd28f746fc26d0800000000000000
+      internalID: -3013763261650830771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_42
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 46
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c65d3e4e6869e840800000000000000
+      internalID: 5253845263272728262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_43
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 42
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece72eefc66807200800000000000000
+      internalID: 175788188158295758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_44
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 44
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a89f6c69bce9a590800000000000000
+      internalID: -7662333009861830489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_45
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 29
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 727dd57c7d9b10ee0800000000000000
+      internalID: -1296550881292069081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_46
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 26
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d296f12ac448dff50800000000000000
+      internalID: 6916830067383298349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_47
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 38
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3015d9d0886cea780800000000000000
+      internalID: -8669773944995360509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_48
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 33
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c6c18cfa9629600800000000000000
+      internalID: 473557114524822599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_49
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 39
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff39f6d3674383ba0800000000000000
+      internalID: -6109075212086569985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_50
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 34
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 118f551285d1bae10800000000000000
+      internalID: 2209892306508970001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_51
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 29
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62da91ed493859180800000000000000
+      internalID: -9109229995882336986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_52
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 20
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6051eaf6632dcf3b0800000000000000
+      internalID: -5477271915545619194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_53
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 29
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084147fa688bc29e0800000000000000
+      internalID: -1644736875288324992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_54
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 24
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7a126433c529bf10800000000000000
+      internalID: 2285899806194932348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_55
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 20
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d2b6fbd3b994940800000000000000
+      internalID: 5280922727575399801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_56
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 24
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a86c78b4e0f3cf40800000000000000
+      internalID: 5747702414593255593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_57
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 23
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 374de49c71824a6a0800000000000000
+      internalID: -6438977484606221197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_58
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 21
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab2e98cdcc16ac40800000000000000
+      internalID: 5523133663176174505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_59
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 20
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84f8083b23d37c370800000000000000
+      internalID: 8342704122696339272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_60
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1
+        width: 128
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac2f8a3a6cf22fa0800000000000000
+      internalID: -5826817434684805979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_61
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d185116133963f0d0800000000000000
+      internalID: -3390250426345367523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_62
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 0
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6099cc7ab74ee5f70800000000000000
+      internalID: 9178024310374963462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_63
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ee45668a43331d0800000000000000
+      internalID: -3372293798094377361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_64
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e53c5778f66cf00800000000000000
+      internalID: 1136718583544634937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reja_3_65
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 0
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77dc21cbd420943a0800000000000000
+      internalID: -6680806039336333961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      reja_3_0: 793591998763088723
+      reja_3_1: -4889262771372493861
+      reja_3_10: 6312060116355181352
+      reja_3_11: -2776160503621347304
+      reja_3_12: 5666377317654355314
+      reja_3_13: -2014777922697274881
+      reja_3_14: 8937692359446319711
+      reja_3_15: 6231181753096717847
+      reja_3_16: 93188238192583723
+      reja_3_17: 4066889398059888951
+      reja_3_18: -1521733163767392789
+      reja_3_19: 7563597401414869287
+      reja_3_2: -6325100131228911578
+      reja_3_20: 1648329972878010950
+      reja_3_21: -3649386312792201891
+      reja_3_22: 3361807396902483354
+      reja_3_23: -2495311806330650399
+      reja_3_24: 7177570835868087488
+      reja_3_25: -6828433389759850888
+      reja_3_26: -1393821593697802076
+      reja_3_27: -2098212025435390259
+      reja_3_28: -6517418566237524386
+      reja_3_29: 2927907890679134946
+      reja_3_3: -607351888850905864
+      reja_3_30: 1304721000754684980
+      reja_3_31: -4384774015883801783
+      reja_3_32: -1238411252817015088
+      reja_3_33: 9061627178991261615
+      reja_3_34: -2936173985957534694
+      reja_3_35: 8741033418152377986
+      reja_3_36: -6024099868937266530
+      reja_3_37: -870184423978763534
+      reja_3_38: 5437866878837933407
+      reja_3_39: 2914569265789629820
+      reja_3_4: -4125266417950691113
+      reja_3_40: -7077623709348083332
+      reja_3_41: -3013763261650830771
+      reja_3_42: 5253845263272728262
+      reja_3_43: 175788188158295758
+      reja_3_44: -7662333009861830489
+      reja_3_45: -1296550881292069081
+      reja_3_46: 6916830067383298349
+      reja_3_47: -8669773944995360509
+      reja_3_48: 473557114524822599
+      reja_3_49: -6109075212086569985
+      reja_3_5: -8018731122570044374
+      reja_3_50: 2209892306508970001
+      reja_3_51: -9109229995882336986
+      reja_3_52: -5477271915545619194
+      reja_3_53: -1644736875288324992
+      reja_3_54: 2285899806194932348
+      reja_3_55: 5280922727575399801
+      reja_3_56: 5747702414593255593
+      reja_3_57: -6438977484606221197
+      reja_3_58: 5523133663176174505
+      reja_3_59: 8342704122696339272
+      reja_3_6: 1409722545087482172
+      reja_3_60: -5826817434684805979
+      reja_3_61: -3390250426345367523
+      reja_3_62: 9178024310374963462
+      reja_3_63: -3372293798094377361
+      reja_3_64: 1136718583544634937
+      reja_3_65: -6680806039336333961
+      reja_3_7: 2158009036258177385
+      reja_3_8: -8756808995025342910
+      reja_3_9: -574401410105245015
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

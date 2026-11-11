@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd263f1971e0b44196e6c11a70c5290, type: 3}
+  m_Name: BancoJeremy
+  m_EditorClassIdentifier: Assembly-CSharp::BancoJeremy
+  idle: {fileID: 2800000, guid: 33e223cda2a95da4dadbe37d85c79475, type: 3}
+  caminar: {fileID: 2800000, guid: 0106f6d515018d24f9584099619654ba, type: 3}
+  correr: {fileID: 2800000, guid: d81413418ad41204d87aea527e0d7e47, type: 3}
+  salto: {fileID: 2800000, guid: bda91545a2acd8c4fb80199d28e8ab73, type: 3}
+  herido: {fileID: 2800000, guid: 45e11b3866fc5aa4bb8697b1880706ce, type: 3}
+  muerte: {fileID: 2800000, guid: eb0ae199ae161534f94a78c077f89a3a, type: 3}
+  pixelesPorUnidad: 100
+  altoPersonajePx: 70
+  anchoCollider: 0.3
+  distanciaPies: 0.3
+  fpsIdle: 6
+  fpsCaminar: 10
+  fpsCorrer: 13
+  fpsHerido: 12
+  fpsMuerte: 8
