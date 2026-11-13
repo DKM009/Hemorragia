@@ -1,0 +1,509 @@
+fileFormatVersion: 2
+guid: d24171d3637c83448bf2e43cde1bab1f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8323438901202749287
+    second: FlameDemon_Defeat_11_0
+  - first:
+      213: 1296336082431205886
+    second: FlameDemon_Defeat_11_1
+  - first:
+      213: 4256406055929417517
+    second: FlameDemon_Defeat_11_2
+  - first:
+      213: 7616298064646827943
+    second: FlameDemon_Defeat_11_3
+  - first:
+      213: -4172528176685197377
+    second: FlameDemon_Defeat_11_4
+  - first:
+      213: 4990052253635516098
+    second: FlameDemon_Defeat_11_5
+  - first:
+      213: -6371129594882658566
+    second: FlameDemon_Defeat_11_6
+  - first:
+      213: 7209709449252256522
+    second: FlameDemon_Defeat_11_7
+  - first:
+      213: 180515464972034721
+    second: FlameDemon_Defeat_11_8
+  - first:
+      213: 3897819901397668489
+    second: FlameDemon_Defeat_11_9
+  - first:
+      213: 2490745332475778788
+    second: FlameDemon_Defeat_11_10
+  - first:
+      213: 1579780202483888678
+    second: FlameDemon_Defeat_11_11
+  - first:
+      213: -4941155797200096635
+    second: FlameDemon_Defeat_11_12
+  - first:
+      213: 5798857906709087250
+    second: FlameDemon_Defeat_11_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FlameDemon_Defeat_11_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 30
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7678bd7c49bc28370800000000000000
+      internalID: 8323438901202749287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlameDemon_Defeat_11_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 36
+        width: 9
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef165d67cc28df110800000000000000
+      internalID: 1296336082431205886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlameDemon_Defeat_11_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 48
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f8e77a1cac11b30800000000000000
+      internalID: 4256406055929417517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlameDemon_Defeat_11_3
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 40
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7afe4c6acb682b960800000000000000
+      internalID: 7616298064646827943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlameDemon_Defeat_11_4
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 38
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7de55fab33816c0800000000000000
+      internalID: -4172528176685197377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlameDemon_Defeat_11_5
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 10
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c61594161a304540800000000000000
+      internalID: 4990052253635516098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlameDemon_Defeat_11_6
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 21
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afe6a0f93633597a0800000000000000
+      internalID: -6371129594882658566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlameDemon_Defeat_11_7
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 33
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0b3570ab880e0460800000000000000
+      internalID: 7209709449252256522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlameDemon_Defeat_11_8
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 26
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a26f16ebd1518200800000000000000
+      internalID: 180515464972034721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlameDemon_Defeat_11_9
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 29
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982914d7c86d71630800000000000000
+      internalID: 3897819901397668489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlameDemon_Defeat_11_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 23
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e65e20fea7e09220800000000000000
+      internalID: 2490745332475778788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlameDemon_Defeat_11_11
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 12
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6223f3069b18ce510800000000000000
+      internalID: 1579780202483888678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlameDemon_Defeat_11_12
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 10
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582b6085bfc7d6bb0800000000000000
+      internalID: -4941155797200096635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FlameDemon_Defeat_11_13
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 10
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2144c50ea8ea97050800000000000000
+      internalID: 5798857906709087250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FlameDemon_Defeat_11_0: 8323438901202749287
+      FlameDemon_Defeat_11_1: 1296336082431205886
+      FlameDemon_Defeat_11_10: 2490745332475778788
+      FlameDemon_Defeat_11_11: 1579780202483888678
+      FlameDemon_Defeat_11_12: -4941155797200096635
+      FlameDemon_Defeat_11_13: 5798857906709087250
+      FlameDemon_Defeat_11_2: 4256406055929417517
+      FlameDemon_Defeat_11_3: 7616298064646827943
+      FlameDemon_Defeat_11_4: -4172528176685197377
+      FlameDemon_Defeat_11_5: 4990052253635516098
+      FlameDemon_Defeat_11_6: -6371129594882658566
+      FlameDemon_Defeat_11_7: 7209709449252256522
+      FlameDemon_Defeat_11_8: 180515464972034721
+      FlameDemon_Defeat_11_9: 3897819901397668489
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
