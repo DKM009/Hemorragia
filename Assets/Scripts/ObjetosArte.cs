@@ -21,6 +21,7 @@ public static class ObjetosArte
     static void Aplicar()
     {
         AgrandarObjetos();
+        PonerPapelAlasNotas();
         foreach (var r in Object.FindObjectsByType<Recolectable>(FindObjectsInactive.Include, FindObjectsSortMode.None))
         {
             if (r.GetComponent<ArteAplicado>() != null) continue;
@@ -34,7 +35,7 @@ public static class ObjetosArte
             {
                 case Recolectable.Tipo.Lata:    sr.sprite = Lata();    escala = 1.0f;  subir = 0.45f; break;
                 case Recolectable.Tipo.Fusible: sr.sprite = Fusible(); escala = 1.1f;  subir = 0.55f; break;
-                default:                        sr.sprite = Venda();   escala = 0.85f; subir = 0.40f; break;
+                default:                        sr.sprite = Venda();   escala = 0.6f;  subir = 0.35f; break;
             }
             sr.color = Color.white;
             sr.sortingOrder = 5;
@@ -46,6 +47,55 @@ public static class ObjetosArte
     }
 
     class ArteAplicado : MonoBehaviour { }
+
+    static Sprite papel;
+    public static Sprite Papel()
+    {
+        if (papel != null) return papel;
+        var imgNota = Resources.Load<Texture2D>("Nota");
+        if (imgNota != null)
+        {
+            imgNota.filterMode = FilterMode.Bilinear;
+            papel = Sprite.Create(imgNota, new Rect(0, 0, imgNota.width, imgNota.height), new Vector2(0.5f, 0.5f), imgNota.width / 0.6f);
+            return papel;
+        }
+        const int W = 12, H = 16;
+        var tex = Nueva(W, H);
+        for (int y = 0; y < H; y++)
+            for (int x = 0; x < W; x++)
+            {
+                bool borde = x == 0 || y == 0 || x == W - 1 || y == H - 1;
+                bool linea = x >= 2 && x <= W - 3 && y >= 3 && y <= H - 4 && y % 3 == 0;
+                bool mancha = (x - 8) * (x - 8) + (y - 4) * (y - 4) <= 3;
+                Color c = borde ? new Color(0.32f, 0.24f, 0.16f)
+                        : mancha ? new Color(0.55f, 0.06f, 0.06f)
+                        : linea ? new Color(0.42f, 0.36f, 0.30f)
+                        : new Color(0.86f, 0.80f, 0.64f);
+                tex.SetPixel(x, y, c);
+            }
+        tex.Apply();
+        papel = Sprite.Create(tex, new Rect(0, 0, W, H), new Vector2(0.5f, 0.5f), 24f);
+        return papel;
+    }
+
+    static void PonerPapelAlasNotas()
+    {
+        foreach (var n in Object.FindObjectsByType<NotaLore>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        {
+            if (n.transform.Find("Papel") != null) continue;
+            var sr = n.GetComponent<SpriteRenderer>();
+            if (sr == null) sr = n.GetComponentInChildren<SpriteRenderer>();
+            int orden = 4; int capa = 0;
+            if (sr != null) { orden = sr.sortingOrder + 1; capa = sr.sortingLayerID; sr.enabled = false; }
+            var go = new GameObject("Papel");
+            go.transform.SetParent(n.transform, false);
+            Vector3 ls = n.transform.lossyScale;
+            float k = 1.3f;
+            go.transform.localScale = new Vector3(k / Mathf.Max(0.01f, Mathf.Abs(ls.x)), k / Mathf.Max(0.01f, Mathf.Abs(ls.y)), 1f);
+            var r = go.AddComponent<SpriteRenderer>();
+            r.sprite = Papel(); r.sortingOrder = orden; r.sortingLayerID = capa;
+        }
+    }
 
     /// <summary>Agranda un objeto desde su base: los pies siguen apoyados en el piso.</summary>
     static void AgrandarDesdeBase(Transform t, float k)

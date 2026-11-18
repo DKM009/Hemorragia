@@ -96,8 +96,8 @@ public class GestorJuego : MonoBehaviour
         yield return new WaitForSeconds(tiempoGameOver);
 
         // Restaurar sangre en el sistema
-        var sangre = FindFirstObjectByType<SistemaSangre>();
-        if (sangre != null) sangre.ResetearSangre();
+        try { var sangre = FindFirstObjectByType<SistemaSangre>(); if (sangre != null) sangre.ResetearSangre(); }
+        catch (System.Exception e) { Debug.LogException(e); }
 
         // Cargar escena del checkpoint
         if (SceneManager.GetActiveScene().name != escenaCheckpoint)
@@ -108,18 +108,26 @@ public class GestorJuego : MonoBehaviour
             yield return null;
         }
 
-        // Mover jugador al checkpoint
-        var jugador = GameObject.FindGameObjectWithTag("Player");
-        if (jugador != null && posicionCheckpoint != Vector3.zero)
-            jugador.transform.position = posicionCheckpoint;
+        // Mover jugador al checkpoint, reactivar controles y poner enemigos en su sitio.
+        // Cada paso va protegido: si uno falla, el juego no se queda congelado en game over.
+        try
+        {
+            var jugador = GameObject.FindGameObjectWithTag("Player");
+            if (jugador != null && posicionCheckpoint != Vector3.zero)
+            {
+                jugador.transform.position = posicionCheckpoint;
+                var rbj = jugador.GetComponent<Rigidbody2D>();
+                if (rbj != null) rbj.linearVelocity = Vector2.zero;
+            }
+        }
+        catch (System.Exception e) { Debug.LogException(e); }
 
         if (mov != null) mov.enabled = true;
 
-        // Enemigos de vuelta a su sitio
-        var nivel1 = FindFirstObjectByType<GestorNivel1>();
-        if (nivel1 != null) nivel1.ReiniciarTrasMuerte();
-        var nivel2 = FindFirstObjectByType<GestorNivel2>();
-        if (nivel2 != null) nivel2.ReiniciarTrasMuerte();
+        try { var nivel1 = FindFirstObjectByType<GestorNivel1>(); if (nivel1 != null) nivel1.ReiniciarTrasMuerte(); }
+        catch (System.Exception e) { Debug.LogException(e); }
+        try { var nivel2 = FindFirstObjectByType<GestorNivel2>(); if (nivel2 != null) nivel2.ReiniciarTrasMuerte(); }
+        catch (System.Exception e) { Debug.LogException(e); }
 
         EstaEnGameOver = false;
 

@@ -31,6 +31,7 @@ public class TexturasNivel : MonoBehaviour
         if (!esc.StartsWith("Nivel")) return;
         if (banco == null) banco = Resources.Load<BancoTexturas>("BancoTexturas");
         if (banco == null) { Debug.LogWarning("[Texturas] Falta correr Tools > Hemorragia > Texturas - Configurar"); return; }
+        if (GameObject.Find("Arte_Escena") != null) return;   // texturas ya puestas en la escena (Texturas movibles)
         if (FindFirstObjectByType<TexturasNivel>() != null) return;
         var go = new GameObject("TexturasNivel");
         var tn = go.AddComponent<TexturasNivel>();
@@ -133,12 +134,14 @@ public class TexturasNivel : MonoBehaviour
     // ── Construccion ─────────────────────────────────────────────────────────
     void Construir(string escena)
     {
+        if (escena == "Nivel1") Nivel1Arreglos();
         foreach (var sr in FindObjectsByType<SpriteRenderer>(FindObjectsInactive.Include, FindObjectsSortMode.None))
         {
             if (sr == null || !sr.enabled || sr.GetComponent<Marca>() != null) continue;
             string n = sr.gameObject.name;
             if (n.StartsWith("Tex_") || n.StartsWith("Gemini") || n == "Patio" || n == "Sprite" || n == "Player") continue;
             if (escena.Contains("2") && Nivel2Arte(sr, n)) continue;
+            if (escena == "Nivel1" && Nivel1Arte(sr, n)) continue;
             if (n.Contains("Magma") || n.Contains("Lava") || n.Contains("Fluido") || n.Contains("Mancha") || n.Contains("Brillante")) continue;
             if (n.StartsWith("Purgador") || n.StartsWith("LaFosa") || n.StartsWith("Nota") || n.StartsWith("Barrera")) continue;
 
@@ -160,15 +163,72 @@ public class TexturasNivel : MonoBehaviour
         Decorar(escena);
     }
 
+    // ── Nivel 1: el camion del patio quedaba flotando; se baja al piso y se agrega un tambo de escalon ──
+    void Nivel1Arreglos()
+    {
+        const float suelo = -4.0f;   // parte alta del suelo principal
+        Bajar("Camion_Base", suelo);
+        Bajar("Camion_Cabina", suelo);
+        var cab = GameObject.Find("Camion_Cabina"); var techo = GameObject.Find("Camion_Techo");
+        if (cab != null && techo != null)
+        {
+            var sr = cab.GetComponent<SpriteRenderer>();
+            float cima = sr != null ? sr.bounds.max.y : suelo + 1.8f;
+            var tp = techo.transform.position; techo.transform.position = new Vector3(tp.x, cima - 0.1f, tp.z);
+        }
+        if (GameObject.Find("Tambo_Escalon") != null || banco.Buscar("n2_barril_a") == null) return;
+        var sp = Spr("n2_barril_a"); if (sp == null) return;
+        var go = new GameObject("Tambo_Escalon");
+        float alto = 1.1f;
+        float k = alto / sp.bounds.size.y;
+        go.transform.localScale = new Vector3(k, k, 1f);
+        go.transform.position = new Vector3(0.3f, suelo + alto * 0.5f, 0f);
+        var r = go.AddComponent<SpriteRenderer>();
+        r.sprite = sp; r.sortingOrder = 1;
+        go.AddComponent<BoxCollider2D>();
+    }
+
+    static void Bajar(string nombre, float suelo)
+    {
+        var go = GameObject.Find(nombre); if (go == null) return;
+        var sr = go.GetComponent<SpriteRenderer>(); if (sr == null) return;
+        float dy = suelo - sr.bounds.min.y;
+        if (dy > -0.01f) return;   // ya esta apoyado (o por debajo)
+        go.transform.position += new Vector3(0f, dy, 0f);
+    }
+
+    static bool PuertaTieneLlave(SpriteRenderer sr)
+    {
+        return sr.GetComponent<PuertaConLlave>() != null || sr.GetComponentInParent<PuertaConLlave>() != null;
+    }
+
+    bool Nivel1Arte(SpriteRenderer sr, string n)
+    {
+        if (banco.Buscar("n2_cofre") == null) return false;
+        if (n.StartsWith("Barril")) { Ajustar(sr, n.EndsWith("A") ? "n2_barril_a" : "n2_barril_b", false, 0.05f); return true; }
+        if (n.StartsWith("Puerta_")) { Ajustar(sr, PuertaTieneLlave(sr) ? "n2_puerta_amarilla_a" : "n2_puerta_verde", true, 0.15f); return true; }
+        if (n == "Tuberia_Caliente" || n == "Tuberia_Emergencia") { Ajustar(sr, "n2_tuberia_naranja", true, 0f); return true; }
+        if (n == "Tuberia_Izq" || n.StartsWith("Tub_Techo")) { Ajustar(sr, "n2_tuberia_gris", true, 0f); return true; }
+        if (n.StartsWith("Soporte_")) { Ajustar(sr, "n2_tuberia_vertical", true, 0f); return true; }
+        if (n == "Escalon_Entrada") { Ajustar(sr, "n2_plataforma", true, 0.1f); return true; }
+        if (n.StartsWith("Escalon")) { Ajustar(sr, "n2_escalon", true, 0.1f); return true; }
+        if (n.StartsWith("Estante") || n == "Plataforma_Izq") { Ajustar(sr, "n2_pasarela", true, 0.1f); return true; }
+        if (n.StartsWith("Caja_Metal")) { Ajustar(sr, "n2_cofre", true, 0.1f); return true; }
+        if (n == "Camion_Base")   { Ajustar(sr, "n2_cofre", true, 0.1f); return true; }
+        if (n == "Camion_Cabina") { Ajustar(sr, "n2_escalon", true, 0.1f); return true; }
+        if (n == "Camion_Techo")  { Ajustar(sr, "n2_plataforma", true, 0.1f); return true; }
+        return false;
+    }
+
     // ── Nivel 2: arte Gemini (Texturas/Nivel2, prefijo n2_) ──────────────────
     static string[] puertasN2 = { "n2_puerta_verde", "n2_puerta_amarilla_a", "n2_puerta_amarilla_b" };
     bool Nivel2Arte(SpriteRenderer sr, string n)
     {
         if (banco.Buscar("n2_barril_a") == null) return false;   // aun sin configurar
+        if (GameObject.Find("N2_Arte") != null) return false;     // texturas ya puestas en la escena a mano
         if (n.StartsWith("Puerta_"))
         {
-            int h = 0; foreach (char c in n) h = h * 31 + c;
-            Ajustar(sr, puertasN2[Mathf.Abs(h) % puertasN2.Length], true, 0.3f); return true;
+            Ajustar(sr, PuertaTieneLlave(sr) ? "n2_puerta_amarilla_a" : "n2_puerta_verde", true, 0.15f); return true;
         }
         if (n == "Lava_N2C") { Ajustar(sr, "n2_lava_b", true, 0f); return true; }
         if (n.StartsWith("Caldera_Izq_Cuerpo")) { Ajustar(sr, "n2_caldera_horizontal", true, 0.1f); return true; }
@@ -186,6 +246,7 @@ public class TexturasNivel : MonoBehaviour
 
     void FondosN2()
     {
+        if (GameObject.Find("N2_Arte") != null) return;
         var a0 = GameObject.Find("Puerta_Entrada_N2A"); var a1 = GameObject.Find("Salida_N2B");
         var c0 = GameObject.Find("Spawn_N2C"); var c1 = GameObject.Find("Msg_N2C_Final");
         if (a0 == null || a1 == null || c0 == null || c1 == null) return;

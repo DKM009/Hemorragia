@@ -29,7 +29,7 @@ public class AnimadorEnemigo : MonoBehaviour
     static void Instalar()
     {
         foreach (var p in FindObjectsByType<PurgadorIA>(FindObjectsInactive.Include, FindObjectsSortMode.None))
-            if (p.GetComponent<AnimadorEnemigo>() == null) p.gameObject.AddComponent<AnimadorEnemigo>();
+            if (!p.name.StartsWith("Monstruito") && p.GetComponent<AnimadorEnemigo>() == null) p.gameObject.AddComponent<AnimadorEnemigo>();
     }
 
     void Awake()
@@ -51,7 +51,8 @@ public class AnimadorEnemigo : MonoBehaviour
         else if (tipo == Tipo.Roja)
         { ti = b.rojaIdle; tm = b.rojaCaminar; ta = b.rojaAtaque; ppu = 115f; bajo = 5f; colTam = new Vector2(1.9f, 1.7f); fpsMover = 7f; }
         else
-        { ti = b.rojaIdle; tm = b.rojaCaminar; ta = b.rojaAtaque; ppu = 80f; bajo = 5f; colTam = new Vector2(2.7f, 2.4f); fpsMover = 6f; }
+        { ti = b.rojaIdle; tm = b.rojaCaminar; ta = b.rojaAtaque; ppu = 170f; bajo = 5f; colTam = new Vector2(1.3f, 1.2f); fpsMover = 8f;
+          ia.velocidadPatrulla *= 1.4f; ia.velocidadRastreo *= 1.4f; ia.velocidadPersecucion *= 1.35f; }
 
         if (ti == null) { enabled = false; return; }
         fIdle   = Cortar(ti, ppu, bajo);

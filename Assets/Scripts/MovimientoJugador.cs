@@ -41,9 +41,16 @@ public class MovimientoJugador : MonoBehaviour
     [Tooltip("Ventana para que un salto presionado antes de aterrizar cuente.")]
     public float tiempoBufferSalto = 0.12f;
 
+    [Header("Agacharse (S / Flecha abajo)")]
+    [Tooltip("Altura del personaje agachado (1 = de pie).")]
+    public float escalaAgachado = 0.7f;
+    [Tooltip("Velocidad al ir agachado.")]
+    public float velocidadAgachado = 1.6f;
+
     // Estado publico (para SistemaSangre, animaciones, audio, etc.)
     public bool EstaEnSuelo   { get; private set; }
     public bool EstaCorriendo { get; private set; }
+    public bool EstaAgachado  { get; private set; }
     public float Horizontal   { get; private set; }
 
     Rigidbody2D      rb;
@@ -51,6 +58,8 @@ public class MovimientoJugador : MonoBehaviour
     SpriteRenderer   sprite;
     float tCoyote, tBuffer;
     bool saltar, cortarSalto;
+    float escalaYBase = 1f;
+    float tAtascado;
 
     void Awake()
     {
@@ -71,13 +80,14 @@ public class MovimientoJugador : MonoBehaviour
     void Update()
     {
         Horizontal    = LeerHorizontal();
-        EstaCorriendo = LeerCorrer() && Mathf.Abs(Horizontal) > 0.01f;
         EstaEnSuelo   = DetectarSuelo();
+        ActualizarAgachado();
+        EstaCorriendo = !EstaAgachado && LeerCorrer() && Mathf.Abs(Horizontal) > 0.01f;
 
         if (EstaEnSuelo) tCoyote = tiempoCoyote; else tCoyote -= Time.deltaTime;
         if (SaltoPresionado()) tBuffer = tiempoBufferSalto; else tBuffer -= Time.deltaTime;
 
-        if (tBuffer > 0f && tCoyote > 0f)
+        if (tBuffer > 0f && tCoyote > 0f && !EstaAgachado)
         {
             saltar  = true;
             tBuffer = 0f;
@@ -94,7 +104,7 @@ public class MovimientoJugador : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 v = rb.linearVelocity;
-        v.x = Horizontal * (EstaCorriendo ? velocidadCorrer : velocidadCaminar);
+        v.x = Horizontal * (EstaAgachado ? velocidadAgachado : (EstaCorriendo ? velocidadCorrer : velocidadCaminar));
 
         if (saltar)
         {
@@ -109,6 +119,63 @@ public class MovimientoJugador : MonoBehaviour
 
         rb.gravityScale    = v.y < 0f ? escalaGravedad * multiplicadorCaida : escalaGravedad;
         rb.linearVelocity  = v;
+    }
+
+    // ---------- Agacharse ----------
+
+    void ActualizarAgachado()
+    {
+        bool quiere = LeerAgacharse() && EstaEnSuelo;
+        if (quiere && !EstaAgachado)
+        {
+            escalaYBase = transform.localScale.y;
+            CambiarEscalaY(escalaYBase * escalaAgachado);
+            EstaAgachado = true;
+        }
+        else if (!quiere && EstaAgachado)
+        {
+            // Si algo raro bloquea el levantarse, tras 0.6 s se levanta igual (antes podia quedar agachado para siempre)
+            tAtascado += Time.unscaledDeltaTime;
+            if (HayEspacioParaLevantarse() || tAtascado > 0.6f)
+            {
+                CambiarEscalaY(escalaYBase);
+                EstaAgachado = false;
+                tAtascado = 0f;
+            }
+        }
+        else tAtascado = 0f;
+    }
+
+    /// <summary>Cambia la altura del personaje manteniendo los pies en su lugar.</summary>
+    void CambiarEscalaY(float y)
+    {
+        float pies = col.bounds.min.y;
+        var s = transform.localScale; s.y = y; transform.localScale = s;
+        Physics2D.SyncTransforms();
+        float dif = pies - col.bounds.min.y;
+        transform.position += new Vector3(0f, dif, 0f);
+        Physics2D.SyncTransforms();
+    }
+
+    bool HayEspacioParaLevantarse()
+    {
+        Bounds b = col.bounds;
+        float alto = b.size.y / Mathf.Max(0.1f, escalaAgachado);
+        Vector2 centro = new Vector2(b.center.x, b.min.y + alto * 0.5f + 0.05f);
+        Vector2 tam = new Vector2(b.size.x * 0.8f, alto - 0.12f);
+        foreach (var h in Physics2D.OverlapBoxAll(centro, tam, 0f))
+            if (h != col && !h.isTrigger && !h.usedByEffector && h.attachedRigidbody != rb) return false;
+        return true;
+    }
+
+    bool LeerAgacharse()
+    {
+#if ENABLE_INPUT_SYSTEM
+        var k = Keyboard.current;
+        return k != null && (k.sKey.isPressed || k.downArrowKey.isPressed);
+#else
+        return Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
+#endif
     }
 
     bool DetectarSuelo()

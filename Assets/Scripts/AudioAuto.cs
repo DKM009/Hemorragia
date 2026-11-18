@@ -123,9 +123,12 @@ public class AudioAuto : MonoBehaviour
             case "Nivel1": clip = (cuarto >= 2) ? banco.nivel1Resto : banco.nivel1Inicio; break;
             case "Nivel2": clip = banco.nivel2; break;
         }
+        bool jefeActivo = esc == "Nivel2" && ArenaJefe.Instancia != null && banco.jefe != null;
+        if (jefeActivo) clip = banco.jefe;
         if (clip != null && clip != musicaActual && AudioManager.Instancia != null)
         {
             musicaActual = clip;
+            AudioManager.escalaProxima = (clip == banco.nivel1Resto) ? 2.6f : (clip == banco.jefe ? 1.6f : 1f);
             AudioManager.CambiarMusica(clip, 2f);
         }
         escenaActual = esc;
@@ -144,7 +147,7 @@ public class AudioAuto : MonoBehaviour
         Lazo(latidos, banco.latidos, critico && !pausa, banco.volLatidos);
 
         // Maquina
-        bool hayMaquina = esc == "Nivel2" || (esc == "Nivel1" && cuarto >= 2);
+        bool hayMaquina = false;
         Lazo(maquina, banco.maquina, hayMaquina && !pausa, banco.volMaquina);
 
         // Pasos / correr

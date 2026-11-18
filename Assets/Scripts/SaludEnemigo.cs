@@ -43,7 +43,11 @@ public class SaludEnemigo : MonoBehaviour
             }
     }
 
-    void Awake()
+    void Awake() { Preparar(); }
+
+    // Se llama desde Awake y tambien desde Revivir: si el enemigo estaba en un cuarto apagado,
+    // Awake aun no habia corrido y las listas estaban vacias (NullReferenceException).
+    void Preparar()
     {
         ia  = GetComponent<PurgadorIA>();
         rb  = GetComponent<Rigidbody2D>();
@@ -110,7 +114,7 @@ public class SaludEnemigo : MonoBehaviour
         Muerto = true;
         tMuerte = 0f;
         if (ia != null) ia.enabled = false;
-        foreach (var c in cols) if (c != null) c.enabled = false;
+        if (cols != null) foreach (var c in cols) if (c != null) c.enabled = false;
         if (rb != null) { rb.linearVelocity = Vector2.zero; rb.simulated = false; }
         AudioAuto.Rugido(transform.position, true);
         AlMorir?.Invoke(this);
@@ -119,16 +123,17 @@ public class SaludEnemigo : MonoBehaviour
     /// <summary>Lo llama PurgadorIA.Reiniciar() cuando el jugador muere y el nivel se reinicia.</summary>
     public void Revivir()
     {
+        if (cols == null || srs == null) Preparar();
         bool estabaMuerto = Muerto;
         Muerto = false;
         vida = vidaMax;
         tMuerte = 0f; tFlash = 0f; tAturdido = 0f;
-        foreach (var c in cols) if (c != null) c.enabled = true;
+        if (cols != null) foreach (var c in cols) if (c != null) c.enabled = true;
         if (rb != null) rb.simulated = true;
         if (ia != null) ia.enabled = true;
         if (estabaMuerto) gameObject.SetActive(true);   // al morir se desactivaba; vuelve al reiniciar el nivel
-        if (baseColor != null)
-            for (int i = 0; i < srs.Length; i++) if (srs[i] != null) srs[i].color = baseColor[i];
+        if (baseColor != null && srs != null)
+            for (int i = 0; i < srs.Length && i < baseColor.Length; i++) if (srs[i] != null) srs[i].color = baseColor[i];
     }
 
     // ── Update ───────────────────────────────────────────────────────────────

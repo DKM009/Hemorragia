@@ -82,6 +82,13 @@ public class LanzadorLatas : MonoBehaviour
     public static Sprite SpriteLata()
     {
         if (spriteLata != null) return spriteLata;
+        var imgLata = Resources.Load<Texture2D>("Lata");
+        if (imgLata != null)
+        {
+            imgLata.filterMode = FilterMode.Bilinear;
+            spriteLata = Sprite.Create(imgLata, new Rect(0, 0, imgLata.width, imgLata.height), new Vector2(0.5f, 0.5f), imgLata.height / 0.45f);
+            return spriteLata;
+        }
         const int W = 10, H = 14;
         var tex = new Texture2D(W, H, TextureFormat.RGBA32, false);
         tex.filterMode = FilterMode.Point;

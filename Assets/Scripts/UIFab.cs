@@ -10,7 +10,7 @@ using UnityEngine.UI;
 /// </summary>
 public static class UIFab
 {
-    static Font Fuente => Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+    static Font Fuente { get { var b = BancoUI.Actual; return b != null && b.fuente != null ? b.fuente : Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf"); } }
 
     // ── Arranque automatico ──────────────────────────────────────────────────
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -95,13 +95,28 @@ public static class UIFab
         rt.anchoredPosition = pos;
         rt.sizeDelta = tam;
         var b = go.AddComponent<Button>();
-        var cols = b.colors;
-        cols.highlightedColor = new Color(0.55f, 0.08f, 0.08f);
-        cols.pressedColor = new Color(0.75f, 0.1f, 0.1f);
-        b.colors = cols;
+        var ui = BancoUI.Actual;
+        if (ui != null)
+        {
+            img.sprite = ui.btnNormal; img.type = Image.Type.Sliced; img.color = Color.white;
+            b.transition = Selectable.Transition.SpriteSwap;
+            var ss = new SpriteState();
+            ss.highlightedSprite = ui.btnHover != null ? ui.btnHover : ui.btnNormal;
+            ss.selectedSprite = ss.highlightedSprite;
+            ss.pressedSprite = ui.btnPresionado != null ? ui.btnPresionado : ui.btnNormal;
+            ss.disabledSprite = ui.btnApagado != null ? ui.btnApagado : ui.btnNormal;
+            b.spriteState = ss;
+        }
+        else
+        {
+            var cols = b.colors;
+            cols.highlightedColor = new Color(0.55f, 0.08f, 0.08f);
+            cols.pressedColor = new Color(0.75f, 0.1f, 0.1f);
+            b.colors = cols;
+        }
         if (accion != null) b.onClick.AddListener(accion);
         Texto(go.transform, "Texto", texto, 26, new Color(0.92f, 0.86f, 0.86f), Vector2.zero, tam,
-              TextAnchor.MiddleCenter, FontStyle.Bold);
+              TextAnchor.MiddleCenter, ui != null ? FontStyle.Normal : FontStyle.Bold);
         return b;
     }
 

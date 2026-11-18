@@ -92,6 +92,9 @@ public class PurgadorIA : MonoBehaviour
         sprite = GetComponentInChildren<SpriteRenderer>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.gravityScale = 2f;
+        // un poco mas agresivo (+3 %)
+        velocidadPatrulla *= 1.03f; velocidadRastreo *= 1.03f; velocidadPersecucion *= 1.03f;
+        radioVision *= 1.03f; radioOlfato *= 1.03f;
     }
 
     void Start()
@@ -101,6 +104,7 @@ public class PurgadorIA : MonoBehaviour
         {
             jugador      = jugadorGO.transform;
             sistemaSangre = jugadorGO.GetComponent<SistemaSangre>();
+            IgnorarChoqueConJugador(jugadorGO);
         }
 
         if (puntosPatrulla != null && puntosPatrulla.Length > 0)
@@ -112,6 +116,7 @@ public class PurgadorIA : MonoBehaviour
     void Update()
     {
         tContacto -= Time.deltaTime;
+        ComprobarContacto();
         ActualizarDeteccion();
         ActualizarEstado();
     }
@@ -308,22 +313,45 @@ public class PurgadorIA : MonoBehaviour
     }
 
     // ── Contacto con el jugador ───────────────────────────────────────────────
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (!col.collider.CompareTag("Player")) return;
-        if (Escondite.JugadorOculto) return; // escondido: no lo encuentra
-        if (tContacto > 0f) return;
+    // El jugador ya no choca fisicamente con los enemigos (no se queda pegado ni se sube a su cabeza):
+    // se les atraviesa, pero si los toca le hacen dano y lo empujan.
+    Collider2D[] colsJugador;
 
+    void IgnorarChoqueConJugador(GameObject jugadorGO)
+    {
+        colsJugador = jugadorGO.GetComponents<Collider2D>();
+        foreach (var cj in colsJugador)
+            foreach (var cm in GetComponents<Collider2D>())
+                if (cj != null && cm != null) Physics2D.IgnoreCollision(cj, cm, true);
+    }
+
+    void ComprobarContacto()
+    {
+        if (tContacto > 0f || jugador == null || colsJugador == null) return;
+        if (Escondite.JugadorOculto) return;
+        var mio = GetComponent<Collider2D>();
+        if (mio == null || !mio.enabled) return;
+        Bounds bm = mio.bounds; bm.Expand(-0.12f);
+        foreach (var cj in colsJugador)
+        {
+            if (cj == null || !cj.enabled) continue;
+            Bounds bj = cj.bounds; bj.Expand(-0.12f);
+            if (bm.Intersects(bj)) { AplicarGolpe(); return; }
+        }
+    }
+
+    void AplicarGolpe()
+    {
         tContacto = cooldownContacto;
 
         // Dano de sangre
         sistemaSangre?.RecibirDano(danoPorContacto);
 
         // Empuje
-        var rbJugador = col.rigidbody;
+        var rbJugador = jugador.GetComponent<Rigidbody2D>();
         if (rbJugador != null)
         {
-            Vector2 dir = (col.transform.position - transform.position).normalized;
+            Vector2 dir = (jugador.position - transform.position).normalized;
             rbJugador.AddForce(dir * fuerzaEmpuje, ForceMode2D.Impulse);
         }
 

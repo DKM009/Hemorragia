@@ -81,6 +81,8 @@ public class AudioManager : MonoBehaviour
     // ── API publica ───────────────────────────────────────────────────────────
 
     /// <summary>Cambia la musica de fondo con crossfade suave.</summary>
+    public static float escalaProxima = 1f;     // multiplica el volumen de la siguiente pista (para pistas bajitas)
+
     public static void CambiarMusica(AudioClip clip, float duracion = 1.5f)
     {
         if (Instancia == null || clip == null) return;
@@ -141,11 +143,13 @@ public class AudioManager : MonoBehaviour
         fuentesMusica[siguiente].Play();
 
         float t = 0f;
+        float vNuevo = Mathf.Min(1f, volumenMusica * escalaProxima);
+        float vViejo = fuentesMusica[indiceActivo].volume;
         while (t < 1f)
         {
             t += Time.unscaledDeltaTime / duracion;
-            fuentesMusica[indiceActivo].volume = Mathf.Lerp(volumenMusica, 0f, t);
-            fuentesMusica[siguiente].volume    = Mathf.Lerp(0f, volumenMusica, t);
+            fuentesMusica[indiceActivo].volume = Mathf.Lerp(vViejo, 0f, t);
+            fuentesMusica[siguiente].volume    = Mathf.Lerp(0f, vNuevo, t);
             yield return null;
         }
 

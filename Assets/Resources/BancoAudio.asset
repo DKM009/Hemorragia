@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BancoAudio
   menu: {fileID: 8300000, guid: 7f248cae664379246bdbfd8ddaf5a967, type: 3}
   nivel1Inicio: {fileID: 8300000, guid: 40891198d4cf75543ae44b3a49129295, type: 3}
-  nivel1Resto: {fileID: 8300000, guid: 465d8813d3b32d446873b715e8f56279, type: 3}
-  nivel2: {fileID: 8300000, guid: 465d8813d3b32d446873b715e8f56279, type: 3}
+  nivel1Resto: {fileID: 8300000, guid: 7d4f9ab3c5e26b8ad3fb02c9e5b6a473, type: 3}
+  nivel2: {fileID: 8300000, guid: 7d4f9ab3c5e26b8ad3fb02c9e5b6a473, type: 3}
   latidos: {fileID: 8300000, guid: b1e3626946f242140913189977d62dc0, type: 3}
   puerta: {fileID: 8300000, guid: 050c14465315d6e41b488ea23e41fcec, type: 3}
-  maquina: {fileID: 8300000, guid: c67864c712d3eec438e3f80fae9d91d9, type: 3}
+  maquina: {fileID: 8300000, guid: 5b2d7e91a3c04f68b1d9e0a7c3f48251, type: 3}
+  jefe: {fileID: 8300000, guid: 6c3e8fa2b4d15a79c2eaf1b8d4a59362, type: 3}
   pasos: {fileID: 8300000, guid: 3dee6054f9e54db409bd7bbb2acef94e, type: 3}
   correr: {fileID: 8300000, guid: 2243269ab260dda4bad6ae85272be1c0, type: 3}
   grito: {fileID: 8300000, guid: e3f0fdab73551ce4dae2c5e7f202d930, type: 3}
@@ -32,7 +33,7 @@ MonoBehaviour:
   cinematicaInicio: {fileID: 32900000, guid: 72f393411752e7b409635a06ab7e0fe9, type: 3}
   volLatidos: 0.8
   volPuerta: 0.8
-  volMaquina: 0.25
+  volMaquina: 0.3
   volPasos: 0.45
   volCorrer: 0.55
   volGrito: 0.9

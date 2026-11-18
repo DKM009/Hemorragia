@@ -20,6 +20,7 @@ public class BancoAudio : ScriptableObject
     public AudioClip maquina;         // Sonido_maquina (fondo industrial)
 
     [Header("Efectos nuevos (Pedro)")]
+    public AudioClip jefe;            // Mounstro_final (pelea contra el Demonio de Fuego)
     public AudioClip pasos;           // Pasos (loop al caminar)
     public AudioClip correr;          // Correr (loop al correr)
     public AudioClip grito;           // Grito (al morir)

@@ -23,7 +23,7 @@ public class MenuPausa : MonoBehaviour
         UIFab.Boton(fondo.transform, "Reiniciar", "REINICIAR NIVEL", new Vector2(0, 30), new Vector2(340, 60), Reiniciar);
         UIFab.Boton(fondo.transform, "Menu", "MENU PRINCIPAL", new Vector2(0, -50), new Vector2(340, 60), IrAlMenu);
         UIFab.Texto(fondo.transform, "Ayuda",
-                    "A/D mover - Shift correr - Espacio saltar - E interactuar - Q lanzar lata",
+                    "A/D mover - Shift correr - Espacio saltar - S agacharse - E interactuar - Q lanzar lata",
                     26, new Color(0.7f, 0.6f, 0.6f), new Vector2(0, -190), new Vector2(1500, 50));
         panel.SetActive(false);
     }

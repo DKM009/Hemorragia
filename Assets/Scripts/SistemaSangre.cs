@@ -62,6 +62,7 @@ public class SistemaSangre : MonoBehaviour
     MovimientoJugador movimiento;
     List<Vector2>     rastroCharcos = new List<Vector2>();
     List<float>       tiemposCharcos = new List<float>();
+    List<GameObject>  charcosVisibles = new List<GameObject>();
     Vector2           ultimaPos;
     float             distAcumulada;
     float             tActivacionCauterizacion;
@@ -153,7 +154,8 @@ public class SistemaSangre : MonoBehaviour
     void ActualizarRastro()
     {
         Vector2 pos = transform.position;
-        distAcumulada += Vector2.Distance(pos, ultimaPos);
+        float salto = Vector2.Distance(pos, ultimaPos);
+        if (salto < 4f) distAcumulada += salto;   // un teletransporte (reaparecer) no cuenta como camino
         ultimaPos = pos;
 
         // Solo dejar charcos si hay sangrado real (no en cauterizacion)
@@ -195,10 +197,11 @@ public class SistemaSangre : MonoBehaviour
             // En el aire no se dibuja mancha (antes quedaban rayas rojas flotando); el rastro si se registra
             if (!haySuelo) { Destroy(charco); charco = null; goto registrar; }
             charco.transform.position   = new Vector3(pos.x, y, 0f);
-            charco.transform.localScale = new Vector3(tamano * 1.6f, 0.12f, 1f);
+            charco.transform.localScale = new Vector3(tamano * 0.9f, tamano * 0.9f, 1f);
             var sr = charco.AddComponent<SpriteRenderer>();
-            sr.sprite       = JugadorRef.SpriteBlanco();
-            sr.color        = new Color(0.45f, 0.02f, 0.03f, 0.9f);
+            sr.sprite       = SangreArte.Charco(Random.Range(0, 4));
+            sr.flipX        = Random.value < 0.5f;
+            sr.color        = new Color(1f, 1f, 1f, 0.95f);
             sr.sortingOrder = 2;
         }
 
@@ -213,7 +216,7 @@ public class SistemaSangre : MonoBehaviour
         }
 
         // El charco visual desaparece a los 60 s (y su rastro tambien, ver PurgarRastroViejo)
-        if (charco != null) Destroy(charco, 60f);
+        if (charco != null) { Destroy(charco, 60f); charcosVisibles.Add(charco); }
     }
 
     /// <summary>Quita del rastro los charcos que ya desaparecieron.</summary>
@@ -321,10 +324,22 @@ public class SistemaSangre : MonoBehaviour
     }
 
     /// <summary>Resetea la sangre al maximo (uso en checkpoints / depuracion).</summary>
+    public static event System.Action AlResetear;
+
     public void ResetearSangre()
     {
+        if (AlResetear != null) AlResetear();
         sangre = sangreMaxima;
         rastroCharcos.Clear();
         tiemposCharcos.Clear();
+        BorrarManchas();
+    }
+
+    /// <summary>Quita del suelo todas las manchas de sangre (al reaparecer).</summary>
+    public void BorrarManchas()
+    {
+        foreach (var c in charcosVisibles) if (c != null) Destroy(c);
+        charcosVisibles.Clear();
+        distAcumulada = 0f;
     }
 }

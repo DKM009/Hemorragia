@@ -36,6 +36,45 @@ public class HUDSangre : MonoBehaviour
     Color colorObjetivo;
     bool  pulsando;
 
+    void Start()
+    {
+        var ui = BancoUI.Actual;
+        if (ui == null || ui.barraLlena == null || rellenoBarra == null) return;
+        var fondo = transform.Find("Fondo_Barra");
+        if (fondo != null)
+        {
+            var fi = fondo.GetComponent<Image>();
+            if (fi != null && ui.barraVacia != null) { fi.sprite = ui.barraVacia; fi.type = Image.Type.Simple; fi.color = Color.white; fi.preserveAspect = false; }
+            // La barra ocupa su cuadro completo (el arte mide 722x110): sin franjas ni fondo rojo sobrante
+            var rtF = fondo.GetComponent<RectTransform>();
+            if (rtF != null) { rtF.sizeDelta = new Vector2(328f, 50f); rtF.anchoredPosition = new Vector2(20f, 14f); }
+        }
+        rellenoBarra.sprite = ui.barraLlena;
+        rellenoBarra.type = Image.Type.Filled;
+        rellenoBarra.fillMethod = Image.FillMethod.Horizontal;
+        rellenoBarra.fillOrigin = 0;
+        rellenoBarra.preserveAspect = false;
+        var rtR = rellenoBarra.rectTransform;
+        rtR.anchorMin = Vector2.zero; rtR.anchorMax = Vector2.one; rtR.offsetMin = Vector2.zero; rtR.offsetMax = Vector2.zero;
+        // El texto de estado va ARRIBA de la barra, sin quedar encima del relleno rojo
+        if (textoEstado != null)
+        {
+            var rtT = textoEstado.rectTransform;
+            rtT.anchorMin = new Vector2(0f, 1f); rtT.anchorMax = new Vector2(1f, 1f); rtT.pivot = new Vector2(0f, 0f);
+            rtT.anchoredPosition = new Vector2(6f, 2f); rtT.sizeDelta = new Vector2(0f, 26f);
+            textoEstado.alignment = TextAnchor.LowerLeft;
+            textoEstado.fontSize = 18;
+            textoEstado.color = new Color(1f, 0.85f, 0.85f);
+            if (ui.fuente != null) textoEstado.font = ui.fuente;
+        }
+        // el arte ya es rojo: los estados lo oscurecen o aclaran
+        colorSano = Color.white;
+        colorSangrando = new Color(1f, 0.70f, 0.70f);
+        colorCritico = new Color(1f, 0.40f, 0.40f);
+        colorCauteriz = new Color(1f, 0.65f, 0.25f);
+        rellenoBarra.color = Color.white;
+    }
+
     void Awake()
     {
         pctActual    = 1f;
