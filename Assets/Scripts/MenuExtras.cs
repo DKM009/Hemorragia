@@ -27,18 +27,23 @@ public class MenuExtras : MonoBehaviour
 
     const string TextoCreditos =
         "¡WAKE UP!\n\n" +
-        "Videojuego de terror 2D\n\n" +
+        "Videojuego 2D\n\n" +
         "Equipo\n" +
-        "Oscar  -  Alexa  -  Pedro  -  Ivan\n" +
-        "Texturas y audio: Pedro\n\n" +
-        "Interfaz: Bloodlines Dark UI (Alebardium)\n" +
-        "Tipografia: Manufacturing Consent (SIL OFL)\n\n" +
-        "Hecho con Unity";
+        "Oscar  -  Alexa  -  Pedro  -  Iván";
 
     void Start()
     {
         var go = GameObject.Find("Texto_Titulo");
-        if (go != null) { titulo = go.GetComponent<Text>(); if (titulo != null) { titulo.text = "¡WAKE UP!"; colorTitulo = titulo.color; } }
+        if (go != null) { titulo = go.GetComponent<Text>(); if (titulo != null)
+            {
+                titulo.text = "¡WAKE UP!"; colorTitulo = titulo.color;
+                var f = FuentesJuego.Titulo;
+                if (f != null)
+                {
+                    titulo.font = f; titulo.fontStyle = FontStyle.Normal; titulo.fontSize = 110;
+                    titulo.horizontalOverflow = HorizontalWrapMode.Overflow; titulo.verticalOverflow = VerticalWrapMode.Overflow;
+                }
+            } }
 
         VestirBotones();
         var canvas = UIFab.CrearCanvas("Canvas_MenuExtras", 60, transform);

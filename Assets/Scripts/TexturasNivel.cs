@@ -31,7 +31,6 @@ public class TexturasNivel : MonoBehaviour
         if (!esc.StartsWith("Nivel")) return;
         if (banco == null) banco = Resources.Load<BancoTexturas>("BancoTexturas");
         if (banco == null) { Debug.LogWarning("[Texturas] Falta correr Tools > Hemorragia > Texturas - Configurar"); return; }
-        if (GameObject.Find("Arte_Escena") != null) return;   // texturas ya puestas en la escena (Texturas movibles)
         if (FindFirstObjectByType<TexturasNivel>() != null) return;
         var go = new GameObject("TexturasNivel");
         var tn = go.AddComponent<TexturasNivel>();
@@ -46,15 +45,7 @@ public class TexturasNivel : MonoBehaviour
         foreach (var n in nuevos) if (n != null) n.SetActive(Activo);
     }
 
-    static bool TeclaF8()
-    {
-#if ENABLE_INPUT_SYSTEM
-        var k = UnityEngine.InputSystem.Keyboard.current;
-        return k != null && k.f8Key.wasPressedThisFrame;
-#else
-        return Input.GetKeyDown(KeyCode.F8);
-#endif
-    }
+    static bool TeclaF8() { return false; }   // atajo de prueba desactivado para la entrega
 
     // ── Sprites ──────────────────────────────────────────────────────────────
     static Sprite Spr(string nombre, float ppu = 100f)
@@ -160,7 +151,10 @@ public class TexturasNivel : MonoBehaviour
                      || n.StartsWith("Escombro") || n.StartsWith("Barril") || n.StartsWith("Escondite")) Teselar(sr, "Tile_Plat", 200f, 0.85f);
         }
         if (escena.Contains("2")) FondosN2();
-        Decorar(escena);
+        // El decorado se genera al azar al darle Play (no vive en la escena), por eso borrarlo a mano no servia.
+        // Si la escena ya trae su arte hecho a mano (Arte_Escena / N2_Arte) o un objeto vacio llamado "SinDecorado", no se genera.
+        bool arteManual = GameObject.Find("Arte_Escena") != null || GameObject.Find("N2_Arte") != null || GameObject.Find("SinDecorado") != null;
+        if (!arteManual) Decorar(escena);
     }
 
     // ── Nivel 1: el camion del patio quedaba flotando; se baja al piso y se agrega un tambo de escalon ──

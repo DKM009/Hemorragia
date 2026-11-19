@@ -157,24 +157,143 @@ public class ArenaJefe : MonoBehaviour
         return sprRejilla;
     }
 
+    // ── Tubos cauterizadores: sanan la hemorragia, pero si te quedas mucho te queman y mueres ──
+    Sprite sprTubo, sprTuboBrillo;
+    void SpritesTubo()
+    {
+        if (sprTubo != null) return;
+        const int W = 32, H = 16;
+        var t1 = new Texture2D(W, H, TextureFormat.RGBA32, false) { filterMode = FilterMode.Point, wrapMode = TextureWrapMode.Repeat };
+        var t2 = new Texture2D(W, H, TextureFormat.RGBA32, false) { filterMode = FilterMode.Point, wrapMode = TextureWrapMode.Repeat };
+        for (int y = 0; y < H; y++)
+            for (int x = 0; x < W; x++)
+            {
+                float v = (y + 0.5f) / H;                                   // 0 abajo, 1 arriba
+                float cil = 0.45f + 0.75f * Mathf.Sin(v * Mathf.PI);       // sombreado de cilindro
+                float luz = cil * (v > 0.62f && v < 0.8f ? 1.25f : 1f);   // brillo especular
+                Color c = new Color(0.34f, 0.29f, 0.27f) * luz;
+                int xm = x % 16;
+                if (xm <= 1 || xm == 15) c = new Color(0.20f, 0.16f, 0.15f) * (0.6f + 0.6f * cil);                    // junta
+                else if (xm == 2 || xm == 14) c = new Color(0.52f, 0.42f, 0.36f) * cil;                               // reborde de la brida
+                if ((xm == 4 || xm == 12) && (y == 3 || y == 12)) c = new Color(0.12f, 0.10f, 0.09f);                 // remaches
+                if (((x * 11 + y * 17) % 23) == 0) c = new Color(0.50f, 0.25f, 0.10f);                                // oxido
+                c.a = 1f; t1.SetPixel(x, y, c);
+                // brillo: rendijas por donde sale el calor (se ven al acercarte)
+                bool rend = xm >= 5 && xm <= 11 && (y == 7 || y == 8);
+                t2.SetPixel(x, y, rend ? new Color(1f, 0.62f, 0.18f, 1f) : new Color(0, 0, 0, 0));
+            }
+        t1.Apply(); t2.Apply();
+        sprTubo = Sprite.Create(t1, new Rect(0, 0, W, H), new Vector2(0.5f, 0.5f), 32f, 0, SpriteMeshType.FullRect);
+        sprTuboBrillo = Sprite.Create(t2, new Rect(0, 0, W, H), new Vector2(0.5f, 0.5f), 32f, 0, SpriteMeshType.FullRect);
+    }
+
+    // Tubo horizontal (largo) o vertical (rot = 90). Devuelve la raiz; agrega zona de cauterizacion alrededor.
+    Transform ConstruirTubo(string nombre, float x, float y, float largo, float rot, Vector2 zonaTam, Vector2 zonaOffset, float maxCalor)
+    {
+        SpritesTubo();
+        var raiz = Hijo(nombre, new Vector2(x, y));
+        var cuerpo = Hijo("Cuerpo", new Vector2(x, y), raiz);
+        cuerpo.localEulerAngles = new Vector3(0f, 0f, rot);
+        var sr = SR(cuerpo, sprTubo, 2);
+        sr.drawMode = SpriteDrawMode.Tiled; sr.size = new Vector2(largo, 0.5f);
+        var brillo = Hijo("Brillo", new Vector2(x, y), raiz);
+        brillo.localEulerAngles = new Vector3(0f, 0f, rot);
+        var sb = SR(brillo, sprTuboBrillo, 3);
+        sb.drawMode = SpriteDrawMode.Tiled; sb.size = new Vector2(largo, 0.5f);
+        sb.color = new Color(1f, 1f, 1f, 0f);
+
+        var luzT = Hijo("Luz", new Vector2(x, y + (rot == 0f ? 0.5f : 0f)), raiz).gameObject.AddComponent<Light2D>();
+        luzT.lightType = Light2D.LightType.Point; luzT.color = new Color(1f, 0.55f, 0.15f);
+        luzT.intensity = 0.25f; luzT.pointLightOuterRadius = 4f; luzT.pointLightInnerRadius = 0.3f;
+
+        var zona = Hijo("ZonaCauterizacion", new Vector2(x + zonaOffset.x, y + zonaOffset.y), raiz);
+        var col = zona.gameObject.AddComponent<BoxCollider2D>();
+        col.isTrigger = true; col.size = zonaTam;
+        try { zona.gameObject.tag = "ZonaCauterizacion"; } catch { }
+        var tc = zona.gameObject.AddComponent<TuboCauterizador>();
+        tc.luz = luzT; tc.brillo = sb; tc.cuerpo = sr; tc.max = maxCalor;
+        return raiz;
+    }
+
+    void CrearTubo(float x)
+    {
+        // Tubo vertical pegado a la izquierda, con tapa y base
+        ConstruirTubo("TuboCauterizador", x, 1.3f, 2.6f, 90f, new Vector2(1.7f, 2.4f), Vector2.zero, 3.6f);
+        var tapa = Hijo("Tapa", new Vector2(x, 2.68f), null);
+        SR(tapa, sprTubo, 4).drawMode = SpriteDrawMode.Tiled;
+        tapa.GetComponent<SpriteRenderer>().size = new Vector2(0.9f, 0.3f);
+        var base_ = Hijo("BaseTubo", new Vector2(x, 0.12f), null);
+        var sbs = SR(base_, sprTubo, 4); sbs.drawMode = SpriteDrawMode.Tiled; sbs.size = new Vector2(1.2f, 0.25f);
+    }
+
+    class TuboCauterizador : MonoBehaviour
+    {
+        public Light2D luz; public SpriteRenderer brillo, cuerpo; public float max = 3.6f;
+        float calor, ultimaVez = -10f, tRestaurar; bool avisado;
+        SpriteRenderer srJ; Color orig = Color.white; SistemaSangre sangre;
+        Transform pj;
+
+        void OnTriggerStay2D(Collider2D o)
+        {
+            if (!o.CompareTag("Player")) return;
+            ultimaVez = Time.time;
+            pj = o.transform;
+            if (srJ == null) { srJ = o.GetComponentInChildren<SpriteRenderer>(); if (srJ != null) orig = srJ.color; }
+            if (sangre == null) sangre = o.GetComponent<SistemaSangre>();
+        }
+
+        void Update()
+        {
+            if (pj == null && ArenaJefe.Instancia != null) pj = ArenaJefe.Instancia.jugador;
+            bool dentro = Time.time - ultimaVez < 0.12f;
+            if (tRestaurar > 0f)
+            {
+                tRestaurar -= Time.deltaTime;
+                if (tRestaurar <= 0f && srJ != null) srJ.color = orig;
+                calor = 0f; avisado = false;
+            }
+            else
+            {
+                calor = Mathf.Clamp(calor + (dentro ? Time.deltaTime : -Time.deltaTime * 1.5f), 0f, max);
+                if (srJ != null)
+                    srJ.color = calor > 0.15f ? Color.Lerp(orig, new Color(1f, 0.3f, 0.05f, 1f), calor / max * 0.9f) : orig;
+                if (calor > max * 0.6f && !avisado) { avisado = true; UIMensaje.Mostrar("¡Te estás quemando! Sal del tubo", 1.5f); }
+                if (calor < max * 0.15f) avisado = false;
+                if (calor >= max)
+                {
+                    calor = 0f; tRestaurar = 2f;
+                    UIMensaje.Mostrar("El tubo te calcinó...", 2f);
+                    if (sangre != null) sangre.RecibirDano(9999f);
+                    else if (GestorJuego.Instancia != null) GestorJuego.Instancia.GameOver();
+                }
+            }
+
+            // Se ilumina al acercarte (y mas aun mientras te quemas)
+            float cerca = 0f;
+            if (pj != null)
+            {
+                var c = GetComponent<Collider2D>();
+                float d = ((Vector2)c.bounds.ClosestPoint(pj.position) - (Vector2)pj.position).magnitude;
+                cerca = Mathf.Clamp01(1f - d / 6f);
+            }
+            float k = Mathf.Clamp01(cerca * 0.85f + calor / max * 0.5f);
+            float parpadeo = 0.9f + 0.1f * Mathf.Sin(Time.time * 11f);
+            if (brillo != null) brillo.color = new Color(1f, 1f, 1f, k * parpadeo);
+            if (cuerpo != null) cuerpo.color = Color.Lerp(Color.white, new Color(1f, 0.72f, 0.55f), k * 0.6f);
+            if (luz != null) luz.intensity = 0.25f + k * 1.9f * parpadeo;
+        }
+    }
+
     void Plataforma(float x, float y, float w)
     {
-        var tr = Hijo("Plataforma", new Vector2(x, y));
-        var sr = SR(tr, SpriteRejilla(), 1);
-        sr.drawMode = SpriteDrawMode.Tiled;
-        sr.size = new Vector2(w, 0.5f);
-        sr.color = Color.white;
-        tr.localScale = Vector3.one;
-        var c = tr.gameObject.AddComponent<BoxCollider2D>();
+        // Plataforma = tubo cauterizador: caminas encima (de una via) y el calor te sana / te quema si te quedas
+        var raiz = ConstruirTubo("PlataformaTubo", x, y, w, 0f, new Vector2(w - 0.3f, 0.9f), new Vector2(0f, 0.65f), 4.5f);
+        var cuerpo = raiz.GetChild(0);
+        var c = raiz.gameObject.AddComponent<BoxCollider2D>();
         c.size = new Vector2(w, 0.35f);
         c.usedByEffector = true;
-        var ef = tr.gameObject.AddComponent<PlatformEffector2D>();
+        var ef = raiz.gameObject.AddComponent<PlatformEffector2D>();
         ef.useOneWay = true; ef.surfaceArc = 170f;
-        var bor = Hijo("Borde", new Vector2(x, y + 0.16f));
-        var sb = SR(bor, JugadorRef.SpriteBlanco(), 2);
-        sb.color = new Color(0.62f, 0.34f, 0.18f, 1f);
-        bor.localScale = new Vector3(w, 0.06f, 1f);
-        sb.color = new Color(0.85f, 0.45f, 0.2f, 0.9f);
     }
 
     void Construir()
@@ -195,6 +314,7 @@ public class ArenaJefe : MonoBehaviour
         // Plataformas para esquivar
         Plataforma(X0 - 6.5f, 1.5f, 4f);
         Plataforma(X0 - 1.5f, 3.0f, 4f);
+        CrearTubo(X0 - 9.8f);
 
         // Demonio de fuego (mira a la izquierda en el dibujo)
         aIdle = Tira("Idle", 8); aGarra = Tira("Attack", 10); aFuego = Tira("Attack2", 12);
@@ -555,7 +675,7 @@ public class ArenaJefe : MonoBehaviour
         if (tMuerte > 4.2f && !final)
         {
             final = true;
-            if (GestorJuego.Instancia != null) GestorJuego.Instancia.CargarEscena("EscenaFinal");
+            Despertar.Reproducir();
         }
     }
 
@@ -648,7 +768,7 @@ public class ArenaJefe : MonoBehaviour
                 float x = lugar == 0 ? X0 - 6.5f + Random.Range(-1.5f, 1.5f)
                         : lugar == 1 ? X0 - 1.5f + Random.Range(-1.5f, 1.5f)
                         : X0 - 11f + Random.value * 22f;
-                SoltarPickup(true, x, lugar == 0 ? 2.4f : lugar == 1 ? 3.9f : 0.9f);
+                SoltarPickup(true, x, lugar == 0 ? 2.6f : lugar == 1 ? 4.1f : 0.9f);
             }
         }
         if (tVenda <= 0f) { tVenda = 14f; if (vendas < 1) SoltarPickup(false, X0 - 11f + Random.value * 12f); }

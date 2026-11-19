@@ -51,6 +51,14 @@ public class PequenoMonstruo : MonoBehaviour
         foreach (var m in Object.FindObjectsByType<PequenoMonstruo>(FindObjectsInactive.Include, FindObjectsSortMode.None))
             if (m.GetComponent<Impredecible>() == null) m.gameObject.AddComponent<Impredecible>();
         if (SceneManager.GetActiveScene().name != "Nivel2") return;
+        // Alerta por cercania: todos los Purgadores del Nivel 2 te detectan al acercarte a su zona (360 grados),
+        // sin depender de que lances una lata ni de que estes de frente.
+        foreach (var pu in Object.FindObjectsByType<PurgadorIA>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        {
+            pu.anguloVision = 360f;
+            pu.radioVision = Mathf.Max(pu.radioVision, 8f);
+            pu.radioOlfato = Mathf.Max(pu.radioOlfato, 7f);
+        }
         var g = Object.FindFirstObjectByType<GestorNivel2>(FindObjectsInactive.Include);
         if (g == null || g.purgadoresZonaB == null) return;
         foreach (var p in g.purgadoresZonaB)
