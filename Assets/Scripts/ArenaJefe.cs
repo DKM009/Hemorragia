@@ -363,21 +363,7 @@ public class ArenaJefe : MonoBehaviour
         return Sprite.Create(tex, new Rect(0, 0, N, N), new Vector2(0.5f, 0.5f), 32f);
     }
 
-    Sprite CrearVenda()
-    {
-        const int N = 10;
-        var tex = new Texture2D(N, N, TextureFormat.RGBA32, false) { filterMode = FilterMode.Point };
-        for (int y = 0; y < N; y++)
-            for (int x = 0; x < N; x++)
-            {
-                bool borde = x == 0 || y == 0 || x == N - 1 || y == N - 1;
-                bool cruz = (x >= 4 && x <= 5) || (y >= 4 && y <= 5);
-                Color c = borde ? new Color(0.35f, 0.3f, 0.3f) : cruz ? new Color(0.8f, 0.08f, 0.1f) : new Color(0.92f, 0.9f, 0.84f);
-                tex.SetPixel(x, y, c);
-            }
-        tex.Apply();
-        return Sprite.Create(tex, new Rect(0, 0, N, N), new Vector2(0.5f, 0.5f), 12f);
-    }
+    Sprite CrearVenda() { return ObjetosArte.Venda(); }
 
     void ConstruirUI()
     {
@@ -746,6 +732,7 @@ public class ArenaJefe : MonoBehaviour
         r.tipo = lata ? Recolectable.Tipo.Lata : Recolectable.Tipo.Venda;
         r.curacion = 30f; r.radio = 1.3f;
         r.mensaje = lata ? "Lata. Lanzala (Q) al pecho del demonio cuando quede aturdido." : "Venda: recuperas sangre.";
+        ObjetosArte.Asentar(go.transform);
         pickups.Add(go);
     }
 

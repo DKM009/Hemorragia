@@ -43,7 +43,9 @@ public static class ObjetosArte
             if (sr.transform != r.transform) r.transform.localScale = Vector3.one;
             r.transform.position += Vector3.up * subir;
             r.radio = Mathf.Max(r.radio, 1.3f);
+            Asentar(r.transform);
         }
+        foreach (var n in Object.FindObjectsByType<NotaLore>(FindObjectsInactive.Include, FindObjectsSortMode.None)) Asentar(n.transform);
     }
 
     class ArteAplicado : MonoBehaviour { }
@@ -133,6 +135,14 @@ public static class ObjetosArte
     public static Sprite Venda()
     {
         if (venda != null) return venda;
+        var img = Resources.Load<Texture2D>("Venda");
+        if (img != null)
+        {
+            img.filterMode = FilterMode.Bilinear;
+            // alto de 0.85 unidades (luego se escala igual que antes)
+            venda = Sprite.Create(img, new Rect(0, 0, img.width, img.height), new Vector2(0.5f, 0.5f), img.height / 0.85f);
+            return venda;
+        }
         const int N = 10;
         var tex = Nueva(N, N);
         for (int y = 0; y < N; y++)
@@ -148,10 +158,42 @@ public static class ObjetosArte
         return venda;
     }
 
+    /// <summary>Apoya el objeto sobre el piso o plataforma que tenga debajo (para que no flote).</summary>
+    public static void Asentar(Transform t)
+    {
+        if (t == null) return;
+        var sr = t.GetComponentInChildren<SpriteRenderer>();
+        if (sr == null || sr.sprite == null) return;
+        Physics2D.SyncTransforms();
+        Bounds b = sr.bounds;
+        var hits = Physics2D.RaycastAll(new Vector2(b.center.x, b.min.y + 0.12f), Vector2.down, 9f);
+        foreach (var h in hits)
+        {
+            if (h.collider == null || h.collider.isTrigger) continue;
+            if (h.collider.transform.IsChildOf(t)) continue;
+            bool propio = false;
+            for (var p = h.collider.transform; p != null; p = p.parent) if (p.CompareTag("Player")) { propio = true; break; }
+            if (propio) continue;
+            var rb = h.collider.attachedRigidbody;
+            if (rb != null && rb.bodyType == RigidbodyType2D.Dynamic) continue;
+            float suelo = h.fraction <= 0f ? h.collider.bounds.max.y : h.point.y;
+            float dy = (suelo + 0.04f) - b.min.y;
+            if (Mathf.Abs(dy) > 0.02f) t.position += Vector3.up * dy;
+            return;
+        }
+    }
+
     /// <summary>Fusible de vidrio ambar con tapas de metal, 8x14 px.</summary>
     public static Sprite Fusible()
     {
         if (fusible != null) return fusible;
+        var imgF = Resources.Load<Texture2D>("Fusible");
+        if (imgF != null)
+        {
+            imgF.filterMode = FilterMode.Bilinear;
+            fusible = Sprite.Create(imgF, new Rect(0, 0, imgF.width, imgF.height), new Vector2(0.5f, 0.5f), Mathf.Max(imgF.width, imgF.height) / 0.95f);
+            return fusible;
+        }
         const int W = 8, H = 14;
         var tex = Nueva(W, H);
         Color clear = new Color(0, 0, 0, 0);
